@@ -40,7 +40,7 @@ User: Authenticated
 - Allow user save data and come back to download
 
 ## User Requirements
-### User: Unathenticated
+User: Unathenticated
 <br/>
 - New users want to be able to view basic information
 - New users want to be able to view a fixed nav-bar with relevant information in form of links and buttons
@@ -62,7 +62,7 @@ User: Authenticated
 - Users want to be able to view their names
 - Users who click on “Learn More” CTAs need to sign up before the make use of the functionalities within the app
 
-### User: Authenticated
+User: Authenticated
 <br/>
 - Users should be able to login with their correct usernames and passwords
 - Users should be able to change their password
