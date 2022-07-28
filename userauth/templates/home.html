@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+{% load static %}
+<body>
+      <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <input type="submit" value="Create" />
+    </form>
+    <div style="padding-top:50px">
+       <a href="/list">
+        <button>To List</button>
+       </a>
+        <a href="/2/update">
+            <button>update</button>
+       </a>
+        <a href="/2/delete">
+            <button>Delete</button>
+       </a>
+    </div>
+</body>
+</html>
