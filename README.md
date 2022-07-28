@@ -30,7 +30,7 @@ User: Unauthenticated
 - Register to view more details
 - No access to use until registered
 <br />
-<br />
+
 User: Authenticated
 <br />
 - Full access to the platform
