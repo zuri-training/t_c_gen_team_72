@@ -79,6 +79,38 @@ User: Authenticated
 
 ## Contribution Guide
 **Steps to collaborate on the repository for team members.**
+<br/>
+Forking and Creating A Pull Request(PR)
+- Fork the file
+- Git clone to local computer
+<br />
+On CMD
+- Git checkout -b [name of new branch]
+- Git branch - view current branch
+- Make necessary change on document
+- Git commit -m ‘I made a change here or here’
+- Git log
+- Git remote -v
+- Git push origin [new branch] - pushes change to your forked repo
+- Click on compare and pull request  button
+- Create pull request
+<br />
+Connecting directly to remote
+- Git remote -v
+- Git remote add upstream git@github.com:zuri-training/t_c_gen_team_72.git
+- Git remote-v
+<br/>
+Grabbing changes from Upstream branch and pulling to local laptop copy
+- Git fetch upstream - grab latest change to local
+- Git reset
+- Git checkout main
+- Git log
+- Git reset
+- Git log
+- Git push origin main/ git push origin main -force
+
+
+
 
 
 
