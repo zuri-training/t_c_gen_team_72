@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  /* .sector{
+    background-image: url('Pictures\hero section blue.png'), url('Pictures\Hero section image.png');
+    background-blend-mode: multiply;
+    background-size: cover;
+}   */
+.rick{
+  background-image: url('../Pictures/Background.png');
+  background-size: cover;
+}
