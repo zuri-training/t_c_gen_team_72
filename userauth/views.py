@@ -1,11 +1,14 @@
 from django.shortcuts import render
-from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
 from .models import t_c_Db
 from django.http import HttpResponse
+
+from . import forms
+
+
 
 
 class CreateView(CreateView):  # Creates the view to insert text to database
@@ -42,3 +45,14 @@ class DeleteTheView(DeleteView):
 
 
 # Create your views here.
+def reset_password_view(request, pk):
+    form = forms.ResetPassword()
+
+    # Check to see if we get a POST back
+    if request.method == "POST":
+        form = forms.ResetPassword(request.POST)
+
+        if form.is_valid():
+            # TODO: Implement logic for updating new password in the database
+            pass
+    return render(request, 'reset_password.html', {'form': form})
