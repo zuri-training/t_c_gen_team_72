@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'loginstyle.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            {% load static %}
+            <img src="{% static '/img/Logo Blue Yellow.png' %} alt="">
+        </div>
+        <div class="main">
+            <div class="side1">
+                <div class="form">
+                    <h4>
+                        Hello Again!
+                    </h4>
+                    <form action="" method="post">
+                        <p class="label">
+                            Email
+                        </p>
+                        <input type="email" name="" id="" placeholder="markjohn@gmail.com" required class="field"><br>
+
+                        <p class="label">
+                            Password
+                        </p>
+                            <input type="password" name="" id="" class="field" required placeholder="minimum of 8 characters"><br>
+
+                        <button type="submit">Log in</button><br>
+                        <input type="checkbox" class="check" id="" checked> <span class="span1">Remember me</span>
+                        <span class="span2"><a href="http://">Forgot your password?</a></span>
+                    </form>
+                    <p class="signin">Don't have an account? <a href="http://">Sign up</a></p>
+                </div>
+            </div>
+            <div class="side2">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
