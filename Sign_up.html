@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Sign_up.css">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+</head>
+<body>
+    <div id="left">
+        <img src="Logo_White.png" alt="White Logo" id="logo">
+        <p id="text">A few clicks away from you generating your professional policies.</p>
+    </div>
+    <div id="right">
+        <div id="right-div">
+            <form action="">
+                <section id="register">
+                    <p>Register</p>
+                    <p>Let's get you started with TermsCreator</p>
+                </section>
+                <fieldset>
+                    <div>
+                        <p>
+                            <label for="email">Email</label>
+                            <input required type="email" name="email" id="email" placeholder="treandfancy@gmail.com">
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input required type="password" name="password" id="password" placeholder="minimum of 8 character" minlength="8">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="contact">Contact Number</label>
+                            <input required type="tel" name="contact" id="contact" placeholder="+234-800-222-4444" pattern="[+][0-9]{3}[0-9]{3}[0-9]{3}[0-9]{4}">
+                        </p>
+                        <p>
+                            <label for="password">Confirm Password</label>
+                            <input required type="password" name="confirm_password" id="confirm_password" placeholder="minimum of 8 characters" minlength="8">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="company">Company</label>
+                            <input required type="text" name="company" id="company" placeholder="My Great Company">
+                        </p>
+                        <p>
+                            <label for="business">Business Type</label>
+                            <input required type="text" name="business" id="business" placeholder="Web designer">
+                        </p>
+                    </div>
+                    <p id="checkbox">
+                        <input type="checkbox" required> I agree with the <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+                    </p>
+                </fieldset>
+                <input type="submit" name="submit" id="submit" value="Create Account">
+            </form>
+        </div>
+        <p id="login">Already have an account? <a href=""> Log in</a></p>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
