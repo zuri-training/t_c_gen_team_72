@@ -80,7 +80,7 @@ User: Authenticated
 <br />
 
 ## Design
-The figma design that will be implemented for this project can be found [here] (https://www.figma.com/file/G2u5xC78DgSOoHznZhwQbA/Terms-Creator---Project-72-Team-Zuri-team-library?node-id=838%3A1849)
+The figma design that will be implemented for this project can be found [here](https://www.figma.com/file/G2u5xC78DgSOoHznZhwQbA/Terms-Creator---Project-72-Team-Zuri-team-library?node-id=838%3A1849)
 
 ## Contribution Guide
 **Steps to collaborate on the repository for team members.**
@@ -89,7 +89,7 @@ Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
 <br />
-- We will then follow the instructions placed in this [link] (https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
+- We will then follow the instructions placed in this [link](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
 
 
 
