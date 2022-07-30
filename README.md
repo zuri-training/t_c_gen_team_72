@@ -76,6 +76,11 @@ User: Authenticated
 - Users should be able to share generated T&C from webapp
 - User should be able to save data and continue at a later time.
 - Users should be able to view file history
+<br />
+<br />
+
+## Design
+The figma design that will be implemented for this project can be found [here] (https://www.figma.com/file/G2u5xC78DgSOoHznZhwQbA/Terms-Creator---Project-72-Team-Zuri-team-library?node-id=838%3A1849)
 
 ## Contribution Guide
 **Steps to collaborate on the repository for team members.**
@@ -84,30 +89,8 @@ Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
 <br />
-On CMD
-- Git checkout -b [name of new branch]
-- Git branch - view current branch
-- Make necessary change on document
-- Git commit -m ‘I made a change here or here’
-- Git log
-- Git remote -v
-- Git push origin [new branch] - pushes change to your forked repo
-- Click on compare and pull request  button
-- Create pull request
-<br />
-Connecting directly to remote
-- Git remote -v
-- Git remote add upstream git@github.com:zuri-training/t_c_gen_team_72.git
-- Git remote-v
-<br/>
-Grabbing changes from Upstream branch and pulling to local laptop copy
-- Git fetch upstream - grab latest change to local
-- Git reset
-- Git checkout main
-- Git log
-- Git reset
-- Git log
-- Git push origin main/ git push origin main -force
+- We will then follow the instructions placed in this [link] (https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
+
 
 
 
