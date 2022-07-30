@@ -89,7 +89,7 @@ Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
 <br />
-- We will then follow the instructions placed in this [link](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
+- We will then follow the instructions placed in [here](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
 
 
 
