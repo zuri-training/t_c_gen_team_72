@@ -7,7 +7,7 @@ body{
 #left{
     width: 638px;
     height: 982px;
-    background: url(lady_on_phone.png) #154ED4 ;
+    background: url("../Pictures/lady_on_phone.png") #154ED4 ;
     background-blend-mode:soft-light;
     background-size: 780.38px 1048.61px;
     background-position: -100px -10px;
