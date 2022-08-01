@@ -36,7 +36,7 @@ img{
 
     /*background*/
 
-    background-image:url("img/Hero\ curve\ shape.png"), url("img/unsplash_npxXWgQ33ZQ.png");
+    background-image:url("Pictures/Herocurveshape.png"), url("Pictures/unsplash_npxXWgQ33ZQ.png");
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: 850px 100%, 700px 100%;
     /*background-size: contain;*/
