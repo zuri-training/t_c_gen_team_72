@@ -9,6 +9,12 @@ from django.http import HttpResponse
 from . import forms
 
 
+def testView(request):
+    return render(request, "editprofile.html")
+def logintest(request):
+    return render(request, "loginform.html")
+
+
 
 
 class CreateView(CreateView):  # Creates the view to insert text to database

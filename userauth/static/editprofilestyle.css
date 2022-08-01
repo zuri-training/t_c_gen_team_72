@@ -120,7 +120,6 @@ form{
 
 input, select{
     align-items: center;
-    gap: 8px;
     color: #ACACAC;
     width: 328px;
     height: 46px;
@@ -129,6 +128,10 @@ input, select{
     padding: 16px;
     border-radius: 8px;
     border:1px solid #757575;
+}
+
+select{
+    padding: 16px;
 }
 
 p{
