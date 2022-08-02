@@ -53,6 +53,5 @@ def reset_password_view(request, pk):
         form = forms.ResetPassword(request.POST)
 
         if form.is_valid():
-            # TODO: Implement logic for updating new password in the database
             pass
     return render(request, 'reset_password.html', {'form': form})
