@@ -5,14 +5,14 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
 
-class ResetPassword(forms.Form):
-    new_password = forms.CharField()  # TODO: add length of password
-    confirm_new_password = forms.CharField()
+class ResetPassword(forms.Form): 
+
+    new_password = forms.CharField(min_length=8, widget=forms.PasswordInput(attrs={'id':'new_password', 'type':'password', 'placeholder':'Enter new password'}))  # TODO: add length of password
+    confirm_new_password = forms.CharField(min_length=8, widget=forms.PasswordInput(attrs={'id':'confirm_new_password', 'type':'password', 'placeholder':'Confirm new password'}))  # TODO: add length of password
 
     def clean(self):
         new_password = self.cleaned_data['new_password']
-        if len(new_password) < 8:
-            raise ValidationError(_('Password must be at least 8 characters'))
+
         if not bool(re.search(r'\d', new_password)):
             raise ValidationError(
                 _('Password must contain at least one digit'))
