@@ -11,10 +11,26 @@ class t_c_Db(models.Model):
 
 class UserModel(models.Model):
     # the model is equivalent to using sql query  <<Create table UserModel(username varchar(100), email varchar(50), ..)
+    registration_date = models.DateTimeField('date published')
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
-    registration_date = models.DateTimeField('date published')
+    contactNumber=models.IntegerField(default=23480000000)
+    company = models.CharField(max_length=150)
+    userAddress=models.CharField(max_length=200)
+    businessType =(
+        ("CO", "Content Creator"),
+        ("BO", "Business Owner"),
+        ("EN", "Entrepreneur"),
+        ("GB", "Government Body"),
+        ("SP", "Software Product")
+    )
+    state= (
+        ("AB", "Abia"),
+        ("AD", "Adamawa")
+        #Tope is to compile all the state names since he is writing it manually. I no get strength abeg - Lola
+    )
+    
 
     def __str__(self):
         return self.title
