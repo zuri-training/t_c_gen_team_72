@@ -6,6 +6,7 @@ from django.views.generic.edit import DeleteView
 from .models import t_c_Db
 from django.http import HttpResponse
 
+
 from . import forms
 
 
@@ -13,6 +14,9 @@ def testView(request):
     return render(request, "editprofile.html")
 def logintest(request):
     return render(request, "loginform.html")
+#Omolola's code below -- tope please fix.
+def policyTest(request):
+    return render(request, "policy.html")
 
 
 
