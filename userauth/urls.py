@@ -14,6 +14,8 @@ path("", views.CreateView.as_view(), name="Home"),
     path('<pk>/reset_password', views.reset_password_view, name='reset_password'),
     path("edit", views.testView, name="edit"),
     path("login", views.logintest,  name="login"),
+    path('login/', views.login, name='loginform'),
+    path('signup/', views.signup),
     #Omolola's code below -- tope please fix.
     path("policy", views.policyTest, name="policy")
 ]
