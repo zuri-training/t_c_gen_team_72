@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions Preview Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 't-c-preview.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+</head>
+<body>
+    <!-- This div is for the side-bar -->
+    <div id="side-bar">
+        <nav id="navbar">
+            <!-- This div contains the white logo -->
+            <div id="logo-div">
+                {% load static %}
+                <img src="{% static '/Logo/logo-white-yellow.png' %}" alt="TermsCreator Logo" id="logo">
+            </div>
+            <div id="user-profile">
+                {% load static %}
+                <span><img src="{% static '/icons/user.png' %}" alt="User Icon"></span>
+                <span>Hello Musa</span>
+            </div>
+            <div id="lower-div">
+                <a href="">
+                    <span>
+                        {% load static %}
+                        <img src="{% static '/icons/folder-2.png' %}" alt="Folder Icon">
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span ><img src="{% static '/icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
+                    <span>Policies</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static '/icons/profile.png' %}" alt="Profile Icon"></span>
+                    <span>My Profile</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static '/icons/document-download.png' %}" alt="Document-download Icon"></span>
+                    <span>Downloads</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static '/icons/save-2.png' %}" alt="Saved Icon"></span>
+                    <span>Saved</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!-- This div is for the mainpage content -->
+    <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+        <div id="policies-line">
+            <div id="left">
+                <p> 
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <button id="export">Export</button>
+            </div>
+        </div>
+        <div id="text-page">
+            {% load static %}
+            <img src="{% static '/Pictures/image.svg' %}" alt="An image with texts" id="image-with-text">
+        </div>
+        <p id="copyright">Copyright 2022 TermsCreator</p>
+    </div>
+</body>
+</html>
