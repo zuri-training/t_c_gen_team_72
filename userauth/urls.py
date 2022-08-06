@@ -15,6 +15,7 @@ path("", views.CreateView.as_view(), name="Home"),
 
     path('login/', views.login, name='loginform'),
     path('signup/', views.signup),
+    path("editprofile", views.editProfile, name="updateprofile"),
     #Omolola's code below -- tope please fix.
     path("policy", views.policyTest, name="policy"),
 ]
