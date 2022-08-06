@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class t_c_Db(models.Model):
     title = models.CharField(max_length=100)
@@ -30,7 +31,7 @@ class UserModel(models.Model):
         ("AD", "Adamawa")
         #Tope is to compile all the state names since he is writing it manually. I no get strength abeg - Lola
     )
-    
+
 
     def __str__(self):
         return self.title

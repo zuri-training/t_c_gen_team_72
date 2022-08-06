@@ -12,12 +12,13 @@
 <body>
     <div id="left">
         {% load static %}
-        <img src="{% static '/Logo/Logo_White.png' %}" alt="White Logo" id="logo">
+        <img src="{% static 'Logo/Logo White.png' %}" alt="White Logo" id="logo">
         <p id="text">A few clicks away from you generating your professional policies.</p>
     </div>
     <div id="right">
         <div id="right-div">
-            <form action="">
+           <form action="" method="POST">
+            {% csrf_token %}
                 <section id="register">
                     <p>Register</p>
                     <p>Let's get you started with TermsCreator</p>
@@ -30,7 +31,7 @@
                         </p>
                         <p>
                             <label for="password">Password</label>
-                            <input required type="password" name="password" id="password" placeholder="minimum of 8 character" minlength="8">
+                            <input required type="password" name="password1" id="password" placeholder="minimum of 8 character" minlength="8">
                         </p>
                     </div>
                     <div>
@@ -40,13 +41,13 @@
                         </p>
                         <p>
                             <label for="password">Confirm Password</label>
-                            <input required type="password" name="confirm_password" id="confirm_password" placeholder="minimum of 8 characters" minlength="8">
+                            <input required type="password" name="password2" id="confirm_password" placeholder="minimum of 8 characters" minlength="8">
                         </p>
                     </div>
                     <div>
                         <p>
                             <label for="company">Company</label>
-                            <input required type="text" name="company" id="company" placeholder="My Great Company">
+                            <input required type="text" name="username" id="company" placeholder="My Great Company">
                         </p>
                         <p>
                             <label for="business">Business Type</label>
