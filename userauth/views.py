@@ -1,3 +1,4 @@
+from cmath import log
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.views.generic.edit import CreateView
@@ -115,7 +116,59 @@ def signup(request):
     else:
         return render(request, 'sign_up.html')
 
+#View for edit profile
+@login_required
+def editProfile(request, id):
+    if request.method == "POST":
+        error = 0
+        # To check if username is not empty
+        if not request.POST['name']:
+            messages.info(request, 'name field is required')
+            error = error + 1
+        else:
+            username = request.POST['name']
 
+        if not request.POST['email']:
+            messages.info(request, 'Email field is required')
+            error = error +1
+        else:
+            email = request.POST['email']
+
+        if not request.POST['company']:
+            messages.info(request, 'company field is required')
+            error = error +1
+        else:
+            company  = request.POST['company']
+
+        if not request.POST['business']:
+            messages.info(request, 'Firstname field is required')
+            error = error +1
+        else:
+            business = request.POST['business']
+
+        if not request.POST['address']:
+            messages.info(request, 'address field is required')
+            error = error +1
+        else:
+            address = request.POST['address']
+
+        if not request.POST['number']:
+            messages.info(request, 'number field is required')
+            error = error +1
+        else:
+            number = request.POST['number']
+
+        if error > 0:
+            return redirect("updateprofile")
+        else:
+            #call the user detail from appropriate table using the users id e.g
+            myuser=User.objects.get(pk=id)
+            #input the above data into the database e.g myuser.company = company
+            myuser.save()
+            messages.success(request, "Your account has been updated successfully")
+            return redirect('dashboard')
+    else:
+        return render(request, "editprofile.html")
 
 """
 class CreateView(CreateView):  # Creates the view to insert text to database
