@@ -1,13 +1,14 @@
+from unicodedata import category
 from django.db import models
 
 
 # Create your models here.
-class t_c_Db(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-
+class Terms_and_condition(models.Model):
+    category = models.CharField(max_length=50, null=False, unique=False)
+    tnc_or_policy = models.CharField(max_length=50, null=False, unique=False)
+    body = models.TextField(null=False, blank=False)
     def __str__(self):
-        return self.title
+        return self.body
 
 
 class UserModel(models.Model):
