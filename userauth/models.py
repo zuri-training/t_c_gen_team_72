@@ -37,7 +37,7 @@ class UserModel(models.Model):
         return self.title
 
 #policy generator form - All question fields on UI
-class privacyPolicyQuestions(models.Model):
+class PrivacyPolicyQuestions(models.Model):
     policyUseChoice = (
     ("Web", "Website"),
     ("App", "Mobile Application")
@@ -105,8 +105,7 @@ def decision(self):
     return self.country
 
 
-class Question(models.Model):
-    pass
+
 
 #I will continue if this is okay to proceed Ire. Please check.
 

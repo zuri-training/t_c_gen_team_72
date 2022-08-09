@@ -5,13 +5,10 @@ from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView, FormView
 from django.views.generic.edit import DeleteView
-<<<<<<< HEAD
-from .models import t_c_Db, PrivacyPolicyQuestions, Questions # UserModel
-||||||| f761943
-from .models import t_c_Db
-=======
 
->>>>>>> 3130e815ab317f907f45821185e68001f3c9c9ce
+from .models import t_c_Db  # UserModel
+
+from .models import t_c_Db, PrivacyPolicyQuestions
 from django.contrib.auth.models import User, auth
 
 from django.conf import settings
@@ -26,6 +23,24 @@ from django.http import HttpResponse
 
 
 from . import forms
+
+class CreateView(CreateView):  # Creates the view to insert text to database
+    model = t_c_Db
+    fields = [
+        "title", "description"
+    ]
+    template_name = 'landingPage.html'
+    success_url = 'list'
+
+
+class ListTheView(ListView):  # list the texts inserted into the database into the html file created here
+    model = t_c_Db
+    template_name = 'listView.html'
+
+    def my_view(self, request):
+        if not request.user.is_authenticated:
+            return redirect('%s?next=s%' % (settings.Login_url, request.path))
+
 
 #Omolola's code below -- tope please fix.
 def policyTest(request):
@@ -223,7 +238,7 @@ class DeleteTheView(DeleteView):
 
 # Create your views here.
 
-<<<<<<< HEAD
+
 def reset_password_view(request, pk):
     form = forms.ResetPassword()
 
@@ -316,31 +331,6 @@ class LoggedUser(TemplateView):
 
 
 
-class CreateViewQuestions(CreateView):  # Creates the view to insert text to database
-    model = Questions
-    fields = [
-        "question",
-    ]
-    template_name = 'createquestions.html'
-    success_url = 'question.html'
-
-
-class ListViewQuestions(ListView):
-    model = Questions
-    template_name = 'question.html'
-
-    def get_questions(self, request):
-        form = forms.QuestionForm()
-        if request == 'POST':
-            form = forms.QuestionForm(request.POST)
-            if form.is_valid():
-                form.save()
-                answer = form.cleaned_data['answer']
-                args ={'answer': answer}
-                return redirect('', args)
-            else:
-                return redirect('signup')
-
 
 
 
@@ -410,7 +400,7 @@ def question1(request):
 
 
 
-||||||| f761943
+
 def reset_password_view(request, pk):
     form = forms.ResetPassword()
 
@@ -461,9 +451,3 @@ def signup(request):
 
 
 
-=======
->>>>>>> 3130e815ab317f907f45821185e68001f3c9c9ce
-
-
-
-    return render(request, '1collection.html')
