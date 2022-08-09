@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from .models import  Questions # UserModel,
 
 
 
@@ -38,4 +39,34 @@ class LoginForm(AuthenticationForm):
     class Meta:
         model = User
         fields = ("username", "email", "password1")
+
+"""
+class UserModelForm(forms.ModelForm):
+    reg_date = forms.DateTimeField()
+    username = forms.CharField()
+    email = forms.EmailField
+    password = forms.PasswordInput
+    contact_no = forms.IntegerField()
+    company = forms.CharField()
+    user_address = forms.CharField()
+    age = forms.BooleanField()
+    age_input = forms.IntegerField()
+
+    class Meta:
+        model = UserModel
+        fields = ('registration_date', 'username', 'email', 'password', 'contactNumber', 'company', 'userAddress')
+"""
+
+class QuestionForm(forms.ModelForm):
+
+    username = forms.CharField()
+
+    class Meta:
+        model = Questions
+        fields = 'question',
+
+
+
+
+
 
