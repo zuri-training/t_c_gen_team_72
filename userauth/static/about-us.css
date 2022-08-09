@@ -1,0 +1,664 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+#navbar{
+    width: 100%;
+    background: #154ed5;
+    height: 87px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    gap: 15.82px;
+    justify-content: space-around;
+    
+}
+.nav-links{
+    height: 48px;
+    display: flex;
+    gap: 36px;
+    position: relative;
+    top: 36px;
+}
+#navbar #Logo{
+    width: 272.37px;
+    height: 41.2px;
+    position: relative;
+    top: 20px;
+}
+#navbar div a:not(#navbar div #start){
+    text-decoration: none;
+    color: #ffffff;
+}
+#start{
+    position: relative;
+    top: -15px;
+    padding: 13px 20px 13px 20px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    letter-spacing: 1.25px; 
+    color: #154ED5;
+}
+#bar{
+    font-size: 50px;
+    cursor: pointer;
+    visibility: hidden;
+    position: relative;
+    top: -40px;
+    left: -60px;
+}
+#bar img{
+    width: 32px;
+    height: 32px;
+    background: #8CAFFF;
+    border-radius: 4px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background: #154ed5;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #8CAFFF;
+}
+.overlay .closebtn {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-size: 100px;
+}
+#bar-start{
+    border-radius: 8px;
+    background: #ffffff;
+    color: #154ED5;
+}   
+main{
+    position: relative;
+}
+#about-us{
+    height: 326px;
+    position: relative;
+    top: 86px;
+    left: 0px;
+    background: #0D2F80;
+    color: #ffffff;
+    padding-top: 103px;
+}
+#about-us h1{
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+#about-us p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.15px;
+    padding-top: 24px;
+}
+section{
+    box-sizing: border-box;
+    padding: 100px 122px 78px 123px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+    top: 64px;
+}
+.box{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    gap: 82px;
+}
+.left-box{
+    box-sizing: border-box;
+    width: 100%;
+}
+.box1 .left-box:nth-of-type(1){
+    width: 70%;
+    height: 243px;
+    background: #D1DFFF;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.box1 .left-box img{
+    width: 50%;
+    height: 20%;
+    position: relative;
+    top: 40%;
+    left: 25%;
+}
+.box2{
+    height: 410px;
+}
+.box2 .left-box{
+    width: 70%;
+}
+.box2 div img{
+    width: 100%;
+    height: 410px;
+}
+.box3{
+    height: 514.39px;
+}
+.box .left-box{
+    width: 70%;
+}
+.box3 div img{
+    width: 100%;
+    height: 410px;
+}
+.right-box{
+    box-sizing: border-box;
+    width: 85%;
+}
+.box1 div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 243px;
+}
+.box1 div p{
+    width: 90%;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;
+    color: #2D2D2D;
+}
+.box2 div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 85%;
+    height: 180px;
+    position: relative;
+    top: 115px;
+}
+.box2 div h3{
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.25px;
+    color: #0D2F80;
+}
+.box2 div p{
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;
+    color: #2D2D2D;
+}
+.box3 div:nth-of-type(2){
+    height: 150px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    top: 184.7px;
+}
+.box3 div h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.25px; 
+    color: #0D2F80;
+}
+.box3 div p{
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;    
+    color: #2D2D2D;
+}
+.box4{
+    height: 428.75px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+#trusted{
+    font-weight: 700;
+    font-size: 47.4476px;
+    line-height: 56px;
+    text-align: center;
+    color: #0D2F80;
+}
+#figures{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+#fig1, #fig2, #fig3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 296.2px;
+    position: relative;
+}
+#figures div img{
+    width: 93.43px;
+}
+#figures div p{
+    margin-top: 0;
+    width: 200px;
+    font-weight: 400;
+    font-size: 21.8735px;
+    line-height: 26px;
+    text-align: center;
+    color: #081F55;
+}
+#generate{
+    position: relative;
+    top: 38px;
+    padding-top: 10px;
+    gap: 10px;
+    width: 405.28px;
+    height: 32.45px;
+    background: #154ED5;
+    border-radius: 8px;
+    text-align: center;
+    align-self: center;
+}
+#generate a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.25px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+footer{
+    position: relative;
+    top: 40px;
+    height: 453px;
+    background: #8CAFFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 72px 70px 207px 70px;
+}
+footer div img{
+    align-items: center;
+    height: 52.36px;
+}
+footer div:not(footer div #one){
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#two{
+    height: 95px;    
+}
+#three{
+    height: 174px;
+}
+#four{
+    height: 169px;
+}
+footer div a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;
+    color: #2D2D2D;
+}
+@media (max-width:1519px){
+    .box1 .left-box:nth-of-type(1){
+        width: 70%;
+        height: 260px;
+        background: #D1DFFF;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width:800px) and (max-width:1250px){
+    section{
+        gap: 0;
+    }
+    .box1 .left-box:nth-of-type(1){
+        height: 420px;
+    }
+    .box1 .left-box img{
+        width:  100%;
+        height: 30%;
+        position: relative;
+        top: 35%;
+        left: 0;
+    }
+    .box2 div:nth-of-type(2){
+        top: 80px;
+    }
+    .box3 div:nth-of-type(2){
+        top: 100px;
+    }
+    footer{
+        position: relative;
+        top: 40px;
+        height: 300px;
+        background: #8CAFFF;
+        display: flex;
+        justify-content: space-around;
+        padding: 72px 25px 207px 25px;
+    }
+}
+@media (min-width:280px) and (max-width:799px){
+    #navbar{
+        width: 100%;
+        background: #154ed5;
+        height: 100px;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        gap: 0px;
+        justify-content: center;
+    }
+    .nav-links{
+        height: 0px;
+        display: flex;
+        gap: 0px;
+        top: 0px;
+        visibility: hidden;
+    }
+    #navbar #Logo{
+        width: 200px;
+        height: 30px;
+        position: relative;
+        top: 30%;
+        left: 15%;
+    }
+    #bar{
+        font-size: 50px;
+        cursor: pointer;
+        padding: 5px;
+        visibility: visible;
+        /* position: relative;
+        top: -70px; */
+    }
+    #about-us{
+        width: 120px;
+        height: 100px;
+        top: 100px;
+        padding-top: 1px;
+    }
+    #about-us h1{
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0.25px;  
+        margin-bottom: 0;
+    }
+    #about-us p{
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.4px;
+        padding-top: 0px;
+        margin-top: 5px;
+    }
+    section{
+        box-sizing: border-box;
+        width: 120%;
+        padding: 0;
+        gap: 48px;
+        top: 100px;
+    }
+    .box1, .box2, .box3{
+        box-sizing: border-box;
+        padding: 24px 32px 12.8px 32px;
+        gap: 48px;
+        top: 100px;
+    }
+    .box{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+    .left-box{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .box1 .left-box:nth-of-type(1){
+        width: 100%;
+        height: 320px;
+    }
+    .box1 .left-box img{
+        width: 80%;
+        height: 40%;
+        position: relative;
+        top: 30%;
+        left: 11%;
+    }
+    .box2{
+        height: 410px;
+    }
+    .box2 .left-box{
+        width: 100%;
+    }
+    .box2 div img{
+        width: 50%;
+        height: 410px;
+        position: relative;
+        left: 25%;
+    }
+    .box3{
+        height: 514.39px;
+    }
+    .box3 .left-box{
+        width: 100%;
+    }
+    .box3 div img{
+        width: 50%;
+        height: 410px;
+        position: relative;
+        left: 25%;
+    }
+    .right-box{
+        width: 100%;
+    }
+    .box1 div:nth-of-type(2){
+        width: 100%;
+        height:fit-content;
+    }
+    .box1 div p{
+        width: 100%;
+    }
+    .box2{
+        height: 500px;
+    }
+    .box2 div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        top: -450px;
+    }
+    .box2 div h3{
+        letter-spacing: 0.45px;
+        text-align: center;
+    }
+    .box3{
+        height: 550px;
+    }
+    .box3 div:nth-of-type(2){
+        height: fit-content;
+        width: 100%;
+        gap: 400px;
+        top: -445px;
+    }
+    .box3 div h3{
+        letter-spacing: 0.45px;
+        text-align: center;
+    }
+    .box3 div p{
+        margin-top: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.15px;    
+        color: #2D2D2D;
+    }
+    .box4{
+        background: #D1DFFF;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    #figures div p{
+        width: 150px;
+    }
+    #trusted{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 56px;
+        text-align: center;
+        color: #0D2F80;
+    }
+    #figures{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #fig1, #fig2, #fig3{
+        width: 100%;
+    }
+    #figures div img{
+        width: 150px;
+    }
+    #generate{
+        visibility: hidden;
+        top: 0px;
+    }
+    footer{
+        width: 130%;
+        position: relative;
+        top: 70px;
+        gap: 16px;
+        height: 436px;
+        background: #8CAFFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+    }
+    footer div img{
+        width: 100%;
+        align-self: center;
+    }
+    #two{
+        height: 95px;  
+        text-align: center;
+    }
+    #three{
+        height: 174px;
+        text-align: center;
+    }
+    #four{
+        height: 169px;
+        text-align: center;
+    }
+}
+@media (min-width:400px) and (max-width:520px){
+    #navbar #Logo{
+        left: 40%;
+    }
+    section{
+        width: 150%;
+    }
+    #about-us{
+        width: 150%;
+    }
+
+}
+@media (min-width:280px) and (max-width:400px){
+    #navbar #Logo{
+        left: 40%;
+    }
+    section{
+        width: 160%;
+    }
+    #about-us{
+        width: 160%;
+    }
+    .box2{
+        height: 600px;
+    }
+    .box3{
+        height: 650px;
+    }
+    .box1 .left-box img{
+        width: 100%;
+        height: 30%;
+        position: relative;
+        top: 35%;
+        left: 0;
+    }
+    footer{
+        padding: 60px;
+        gap: 20px;
+    }
+}
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  @media (min-width:521px) and (max-width:799px){
+    section{
+        width: 140%;
+    }
+    #about-us{
+        width: 140%;
+    }
+  }
