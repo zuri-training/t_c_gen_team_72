@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+{% if user.is_authenticated %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +11,7 @@
     <link rel="stylesheet" href="{%static 't-c-preview.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
 </head>
+
 <body>
     <div id="mobile-sidebar-open">
         <div id="myNav" class="overlay">
@@ -115,7 +118,10 @@
             <div id="user-profile">
                 {% load static %}
                 <span><img src="{% static '/icons/user.png' %}" alt="User Icon"></span>
-                <span>Hello Musa</span>
+
+                <span>{{ user.username }}</span>
+
+
             </div>
             <div id="lower-div">
                 <a href="">
@@ -155,6 +161,17 @@
             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
         </button>
         <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+        {% for object in object_list %}
+
+        <p>{% if object.userLocate is True %}</p>
+            <p>{{ object.userLocate }}</p>
+        {% endif %}
+        {% empty %}
+            <li>its empty</li>
+        {% endfor %}
+        {% for x in new_user %}
+        <p>{{ x.description }}</p>
+        {% endfor %}
         <div id="policies-line">
             <div id="left">
                 <p> 
@@ -172,6 +189,7 @@
                 <button id="export">Export</button>
             </div>
         </div>
+
         <div id="text-page">
             {% load static %}
             <img src="{% static '/Pictures/image.svg' %}" alt="An image with texts" id="image-with-text">
@@ -180,5 +198,30 @@
     </div>
     {% load static %}
     <script src="t-c-preview.js"></script>
+</body>
+{% endif %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'password-success-modal.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+</head>
+<body>
+    <div id="content">
+        <div id="text-without-button">
+            {% load static %}
+
+            <section id="texts">
+                <p>You Have Not Been Logged In!</p>
+                <p>Kindly Login</p>
+            </section>
+        </div>
+        <a href="/login" id="login">
+            Continue to Login<img src="{% static '/icons/arrow-right.svg' %}" alt="Arrow-right">
+        </a>
+    </div>
 </body>
 </html>
