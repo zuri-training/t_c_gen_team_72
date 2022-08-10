@@ -4,9 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Work+Sans:400,700&display=swap" rel="stylesheet">
-	 {% load static %} 
-   <link rel="stylesheet" href="contact.css" />
+	 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Work+Sans:400,700&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="{% static 'contact.css' %}" />
 	<title></title>
 </head>
 <body>
@@ -14,10 +13,18 @@
        
        	<div class="nav-bar-nav">
        		{% load static %}
-          <img class="image" id="logo" src="{% static '/Logo/Logo-Blue-Yellow.png'%}" alt="logo image" width="224px" height="40px" />
+       		<picture>
+					    <source media="(min-width: 361px)" srcset="{% static '/Logo/Logo-Blue-Yellow.png'%}" width="224px" height="40px" >
+					    <source media="(max-width: 360px)" srcset="{% static '/Logo/Logo-Terms.png'%}">
+					    <img class="image" id="logo" src="{% static '/Logo/Logo Blue Yellow.png'%}" alt="logo image" width="224px" height="40px" />
+					</picture> 
         </div>
         <!-- menu items -->
-
+        {% load static %}
+        <span id="toggle-nav" onclick="toggleNav()">
+            <img src="{% static '/images/menu-button.png'%}">
+         </span>
+        
         <div class="menu-items">
           <a href="#">Products</a>
           <a href="#">Resources</a>
@@ -31,7 +38,7 @@
     </nav>
 
 	<header>
-		{% load static %}
+			{% load static %}
 			<div class="banner">
 			</div>
 			<div class="text1">
@@ -60,8 +67,8 @@
 						<input type="submit" class="button" value="submit">
 					</form>
 				</div>
-				<div class="rafiki">
-					<div>
+				<div class="side-info">
+					<div class="rafiki">
 						{% load static %}
 						<img src="{% static '/images/rafiki.png'%}">
 					</div>
@@ -73,7 +80,7 @@
 						</div>
 						<div class="info">
 							{% load static %}
-							<img src="{% static'/images/sms.png'%}" width="21.5px" height="18.5px">
+							<img src="{% static '/images/sms.png'%}" width="21.5px" height="18.5px">
 							<p>support@termscreator.com</p>
 						</div>
 					</div>
@@ -93,7 +100,6 @@
         <div class="logo-container">
           <!-- Logo -->
           	<div class="logo">
-          		{% load static %}
             <img src="{% static '/Logo/Logo-Blue-Yellow.png'%}" alt="logo image" width="224px" height="40px"  />
         	</div>
         </div>
@@ -134,9 +140,8 @@
         </div>
       </div>
     </footer>
+
+
+    <script src="{% static 'contact.js' %}"></script>
   </body>
-</html>
-
-
-</body>
 </html>
