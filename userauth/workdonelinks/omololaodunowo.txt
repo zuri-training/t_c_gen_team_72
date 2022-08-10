@@ -1,0 +1,10 @@
+a. Github Maintenance: https://github.com/zuri-training/t_c_gen_team_72
+                       https://github.com/zuri-training/t_c_gen_team_72/commits?author=aanu444 
+                       https://github.com/orgs/zuri-training/projects/468/views/1
+b. Create Responsive Policy Page: - Html: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/policy.html
+                                    SCSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/policy.scss
+c. Create Django Models - https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/models.py
+d. Work On Github Documentation - https://github.com/zuri-training/t_c_gen_team_72#readme
+e. Host frontend screens for supervisor review on Github pages - https://aanu444.github.io/t-c-gen-72/  
+
+ ##All links above have been tested to work and link directly to the task links.            

@@ -5,6 +5,7 @@ from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.edit import UpdateView, FormView
 from django.views.generic.edit import DeleteView
+from django.views.generic import TemplateView
 
 from .models import t_c_Db  # UserModel
 
@@ -46,6 +47,9 @@ class ListTheView(ListView):  # list the texts inserted into the database into t
 def policyTest(request):
     return render(request, "policy.html")
 
+class home(TemplateView):
+    template_name = "landingPage.html"
+
 @login_required
 def reset_password_view(request, pk):
     form = forms.ResetPassword()
@@ -66,7 +70,7 @@ def login(request):
         error = 0
         # To check if username is not empty
         if not request.POST['username']:
-            messages.info(request, 'Username field is required')
+            messages.error(request, 'Username field is required')
 
 
         else:
@@ -75,7 +79,7 @@ def login(request):
 
         # To check if password is not empty
         if not request.POST['password']:
-            messages.info(request, 'Password field is required')
+            messages.error(request, 'Password field is required')
 
         else:
             password = request.POST['password']
@@ -91,12 +95,16 @@ def login(request):
 
             if user is not None:
                 auth.login(request, user)
-                return redirect('/list')
+                messages.success(request, "You are successfully logged in")
+                return redirect('home')
             else:
-               messages.info(request, 'Invalid Username or Password')
+               messages.error(request, 'Invalid Username or Password')
 
     else:
-        return render(request, 'loginform.html')
+        if request.user.is_authenticated:
+            redirect("Home")
+        else:
+            return render(request, 'loginform.html')
 
 
 #Login authenticatin and request
@@ -135,7 +143,10 @@ def signup(request):
             messages.success(request, 'success')
             return redirect('/list')
     else:
-        return render(request, 'sign_up.html')
+        if request.user.is_authenticated:
+            redirect("Home")
+        else:
+            return render(request, 'sign_up.html')
 
 #View for edit profile
 @login_required
@@ -144,37 +155,37 @@ def editProfile(request, id):
         error = 0
         # To check if username is not empty
         if not request.POST['name']:
-            messages.info(request, 'name field is required')
+            messages.error(request, 'name field is required')
             error = error + 1
         else:
             username = request.POST['name']
 
         if not request.POST['email']:
-            messages.info(request, 'Email field is required')
+            messages.error(request, 'Email field is required')
             error = error +1
         else:
             email = request.POST['email']
 
         if not request.POST['company']:
-            messages.info(request, 'company field is required')
+            messages.error(request, 'company field is required')
             error = error +1
         else:
             company  = request.POST['company']
 
         if not request.POST['business']:
-            messages.info(request, 'Firstname field is required')
+            messages.error(request, 'Firstname field is required')
             error = error +1
         else:
             business = request.POST['business']
 
         if not request.POST['address']:
-            messages.info(request, 'address field is required')
+            messages.error(request, 'address field is required')
             error = error +1
         else:
             address = request.POST['address']
 
         if not request.POST['number']:
-            messages.info(request, 'number field is required')
+            messages.error(request, 'number field is required')
             error = error +1
         else:
             number = request.POST['number']

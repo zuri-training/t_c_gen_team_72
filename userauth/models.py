@@ -1,13 +1,21 @@
+from unicodedata import category
 from django.db import models
 
 
-# Create your models here.
 class t_c_Db(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
 
     def __str__(self):
         return self.title
+
+# Create your models here.
+class Terms_and_condition(models.Model):
+    category = models.CharField(max_length=50, null=False, unique=False)
+    tnc_or_policy = models.CharField(max_length=50, null=False, unique=False)
+    body = models.TextField(null=False, blank=False)
+    def __str__(self):
+        return self.body
 
 
 class UserModel(models.Model):
@@ -28,7 +36,43 @@ class UserModel(models.Model):
     )
     state= (
         ("AB", "Abia"),
-        ("AD", "Adamawa")
+        ("FC", "Abuja Federal Capital Territory"),
+        ("AD", "Adamawa"),
+        ("AK", "Akwa Ibom"),
+        ("AN", "Anambra"),
+        ("BA", "Bauchi"),
+        ("BY", "Bayelsa"),
+        ("BE", "Benue"),
+        ("BO", "Borno"),
+        ("CR", "Cross River"),
+        ("DE", "Delta"),
+        ("EB", "Ebonyi"),
+        ("ED", "Edo"),
+        ("EK", "Ekiti"),
+        ("EN", "Enugu"),
+        ("GO", "Gombe"),
+        ("IM", "Imo"),
+        ("JI", "Jigawa"),
+        ("KD", "Kaduna"),
+        ("KN", "Kano"),
+        ("KT", "Katsina"),
+        ("KE", "Kebbi"),
+        ("KO", "Kogi"),
+        ("KW", "Kwara"),
+        ("LA", "Lagos"),
+        ("NA", "Nasarawa"),
+        ("NI", "Niger"),
+        ("OG", "Ogun"),
+        ("ON", "Ondo"),
+        ("OS", "Osun"),
+        ("OY", "Oyo"),
+        ("PL", "Plateau"),
+        ("RI", "Rivers"),
+        ("SO", "Sokoto"),
+        ("TA", "Taraba"),
+        ("YO", "Yobe"),
+        ("ZA", "Zamfara")
+
         #Tope is to compile all the state names since he is writing it manually. I no get strength abeg - Lola
     )
 
