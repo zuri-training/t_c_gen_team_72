@@ -2,6 +2,13 @@ from unicodedata import category
 from django.db import models
 
 
+class t_c_Db(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
+
 # Create your models here.
 class Terms_and_condition(models.Model):
     category = models.CharField(max_length=50, null=False, unique=False)
@@ -74,10 +81,10 @@ class UserModel(models.Model):
         return self.title
 
 #policy generator form - All question fields on UI
-class privacyPolicyQuestions(models.Model):
+class PrivacyPolicyQuestions(models.Model):
     policyUseChoice = (
     ("Web", "Website"),
-    ("App", "Mobile Application")  
+    ("App", "Mobile Application")
 )
     other_policyUseChoice=models.CharField(max_length=50)
     userLocate =models.BooleanField()
@@ -142,8 +149,7 @@ def decision(self):
     return self.country
 
 
-class Question(models.Model):
-    pass
+
 
 #I will continue if this is okay to proceed Ire. Please check.
 
