@@ -10,6 +10,100 @@
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
 </head>
 <body>
+    <div id="mobile-sidebar-open">
+        <div id="myNav" class="overlay">
+            <div id="A">
+                {% load static %}
+                <img src="{% static 'Logo/Logo-Blue-Yellow.png' %}" alt="Logo" id="yellow-logo">
+                {% load static %}
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="{% static 'icons/menu.svg' %}" alt="Menu">
+                </a>
+            </div>
+            <div id="B" class="overlay-content">
+                <a href="">
+                    <span>
+                        {% load static %}
+                        <img src="{% static 'icons/folder-2.png' %}" alt="Folder Icon">
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span ><img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
+                    <span>Policies</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/profile.png' %}" alt="Profile Icon"></span>
+                    <span>My Profile</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon"></span>
+                    <span>Downloads</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/save-2.png' %}" alt="Saved Icon"></span>
+                    <span>Saved</span>
+                </a>
+            </div>
+            <div id="C">
+                <div id="user">
+                    {% load static %}
+                    <span><img src="{% static 'icons/user.png' %}" alt="User Icon"></span>
+                    <span>Musa</span>
+                </div>
+                <a href="" id="log-out">
+                    {% load static %}
+                    <span><img src="{% static 'icons/Arrow-right.svg' %}" alt="Arrow-right"></span>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-sidebar">
+        <nav>
+            {% load static %}
+            <div id="top" onclick="openNav()">
+                {% load static %}
+                <img src="{% static 'icons/menu.svg' %}" alt="Menu">
+            </div>
+            <div id="middle">
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/folder-2.png' %}"alt="Folder Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/profile.png' %}" alt="Profile Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/save-2.png' %}"alt="Saved Icon">
+                </a>
+            </div>
+            <div id="bottom">
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/user.png' %}" alt="User Icon" id="user">
+                </a>
+                {% load static %}
+                <a href="">
+                    <img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right" id="arrow">
+                </a>
+            </div>
+        </nav>
+    </div>
     <!-- This div is for the side-bar -->
     <div id="side-bar">
         <nav id="navbar">
@@ -84,5 +178,7 @@
         </div>
         <p id="copyright">Copyright 2022 TermsCreator</p>
     </div>
+    {% load static %}
+    <script src="t-c-preview.js"></script>
 </body>
 </html>
