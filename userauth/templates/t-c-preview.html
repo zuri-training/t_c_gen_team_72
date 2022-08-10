@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+{% if user.is_authenticated %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +11,102 @@
     <link rel="stylesheet" href="{%static 't-c-preview.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
 </head>
+
 <body>
+    <div id="mobile-sidebar-open">
+        <div id="myNav" class="overlay">
+            <div id="A">
+                {% load static %}
+                <img src="{% static 'Logo/Logo-Blue-Yellow.png' %}" alt="Logo" id="yellow-logo">
+                {% load static %}
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                    <img src="{% static 'icons/menu.svg' %}" alt="Menu">
+                </a>
+            </div>
+            <div id="B" class="overlay-content">
+                <a href="">
+                    <span>
+                        {% load static %}
+                        <img src="{% static 'icons/folder-2.png' %}" alt="Folder Icon">
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span ><img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon"></span>
+                    <span>Policies</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/profile.png' %}" alt="Profile Icon"></span>
+                    <span>My Profile</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon"></span>
+                    <span>Downloads</span>
+                </a>
+                <a href="">
+                    {% load static %}
+                    <span><img src="{% static 'icons/save-2.png' %}" alt="Saved Icon"></span>
+                    <span>Saved</span>
+                </a>
+            </div>
+            <div id="C">
+                <div id="user">
+                    {% load static %}
+                    <span><img src="{% static 'icons/user.png' %}" alt="User Icon"></span>
+                    <span>Musa</span>
+                </div>
+                <a href="" id="log-out">
+                    {% load static %}
+                    <span><img src="{% static 'icons/Arrow-right.svg' %}" alt="Arrow-right"></span>
+                    <span>Log Out</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-sidebar">
+        <nav>
+            {% load static %}
+            <div id="top" onclick="openNav()">
+                {% load static %}
+                <img src="{% static 'icons/menu.svg' %}" alt="Menu">
+            </div>
+            <div id="middle">
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/folder-2.png' %}"alt="Folder Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/clipboard-tick.png' %}" alt="clipboard-tick Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/profile.png' %}" alt="Profile Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/document-download.png' %}" alt="Document-download Icon">
+                </a>
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/save-2.png' %}"alt="Saved Icon">
+                </a>
+            </div>
+            <div id="bottom">
+                <a href="">
+                    {% load static %}
+                    <img src="{% static 'icons/user.png' %}" alt="User Icon" id="user">
+                </a>
+                {% load static %}
+                <a href="">
+                    <img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-right" id="arrow">
+                </a>
+            </div>
+        </nav>
+    </div>
     <!-- This div is for the side-bar -->
     <div id="side-bar">
         <nav id="navbar">
@@ -21,7 +118,10 @@
             <div id="user-profile">
                 {% load static %}
                 <span><img src="{% static '/icons/user.png' %}" alt="User Icon"></span>
-                <span>Hello Musa</span>
+
+                <span>{{ user.username }}</span>
+
+
             </div>
             <div id="lower-div">
                 <a href="">
@@ -61,6 +161,17 @@
             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
         </button>
         <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+        {% for object in object_list %}
+
+        <p>{% if object.userLocate is True %}</p>
+            <p>{{ object.userLocate }}</p>
+        {% endif %}
+        {% empty %}
+            <li>its empty</li>
+        {% endfor %}
+        {% for x in new_user %}
+        <p>{{ x.description }}</p>
+        {% endfor %}
         <div id="policies-line">
             <div id="left">
                 <p> 
@@ -78,11 +189,39 @@
                 <button id="export">Export</button>
             </div>
         </div>
+
         <div id="text-page">
             {% load static %}
             <img src="{% static '/Pictures/image.svg' %}" alt="An image with texts" id="image-with-text">
         </div>
         <p id="copyright">Copyright 2022 TermsCreator</p>
+    </div>
+    {% load static %}
+    <script src="t-c-preview.js"></script>
+</body>
+{% endif %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'password-success-modal.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+</head>
+<body>
+    <div id="content">
+        <div id="text-without-button">
+            {% load static %}
+
+            <section id="texts">
+                <p>You Have Not Been Logged In!</p>
+                <p>Kindly Login</p>
+            </section>
+        </div>
+        <a href="/login" id="login">
+            Continue to Login<img src="{% static '/icons/arrow-right.svg' %}" alt="Arrow-right">
+        </a>
     </div>
 </body>
 </html>

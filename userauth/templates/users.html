@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body>
+  <form method="POST">
+    {% csrf_token %}
+    {% for object in object_list %}
+            {{ object.question}}
+           <div>
+                        <p>
+                            <label for="email">Age</label>
+                            <input required type="text" name="email" id="email" placeholder="">
+                        </p>
+
+         {% endfor %}
+
+registration_date=reg_date, username=username, email=email, password=password,
+                             company=company, user_address=user_address, contact_no=contact_no, age=age,
+                             input_age=input_age
+                <fieldset>
+                    <div>
+                        <p>
+                            <label for="reg_date">Date</label>
+                            <input required type="datetime-local" name="reg_date" id="reg_date" placeholder="">
+                        </p>
+                        <p>
+                            <label for="username">Username</label>
+                            <input required type="text" name="username" id="username" placeholder="minimum of 8 character" minlength="20">
+                        </p>
+                        <p>
+                            <label for="email">Date</label>
+                            <input required type="email" name="email" id="" placeholder="">
+                        </p>
+                         <p>
+                            <label for="password">Username</label>
+                            <input required type="password" name="password1" id="password" placeholder="minimum of 8 character" minlength="8">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="contact">Contact Number</label>
+                            <input required type="tel" name="contact" id="contact" placeholder="+234-800-222-4444" pattern="[+][0-9]{3}[0-9]{3}[0-9]{3}[0-9]{4}">
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            <label for="contact">Contact Number</label>
+                            <input required type="text" name="user_address" id="user_address" placeholder="+234-800-222-4444" pattern="[+][0-9]{3}[0-9]{3}[0-9]{3}[0-9]{4}">
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            <label for="company">Company</label>
+                            <input required type="text" name="username" id="company" placeholder="My Great Company">
+                        </p>
+                    </div>
+                    <p id="checkbox">
+                        <input type="checkbox" required> I agree with the <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+                    </p>
+                    <input type="checkbox" name="age" value="Bike" id="age">
+                    <label for="age"> Above 18 </label><br>
+                </fieldset>
+                <input type="submit" name="submit" id="submit" value="Create Account">
+           </div>
+  </form>
+
+
+</body>
+</html>
