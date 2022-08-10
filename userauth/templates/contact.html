@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Work+Sans:400,700&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="{% static 'contact.css' %}" />
+	<title></title>
+</head>
+<body>
+	<nav class="nav-bar">
+       
+       	<div class="nav-bar-nav">
+       		{% load static %}
+       		<picture>
+					    <source media="(min-width: 361px)" srcset="{% static '/Logo/Logo-Blue-Yellow.png'%}" width="224px" height="40px" >
+					    <source media="(max-width: 360px)" srcset="{% static '/Logo/Logo-Terms.png'%}">
+					    <img class="image" id="logo" src="{% static '/Logo/Logo Blue Yellow.png'%}" alt="logo image" width="224px" height="40px" />
+					</picture> 
+        </div>
+        <!-- menu items -->
+        {% load static %}
+        <span id="toggle-nav" onclick="toggleNav()">
+            <img src="{% static '/images/menu-button.png'%}">
+         </span>
+        
+        <div class="menu-items">
+          <a href="#">Products</a>
+          <a href="#">Resources</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Log in</a>
+        <!-- button -->
+        <a href="#"><button>Get Started</button></a>
+        </div>
+
+    </nav>
+
+	<header>
+			{% load static %}
+			<div class="banner">
+			</div>
+			<div class="text1">
+				<h5>For any question regarding our privacy policy or terms and conditions, 
+					please get in touch with us, using the form below.</h5>
+			</div>
+			<div class="text2">
+				<h6>
+					We are available 24/7
+				</h6>
+			</div>
+		
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="content">
+				<div class="form">
+					<h4>Alright, get in touch!</h4>
+					<form>
+						<label>Enter your name</label><br/>
+						<input type="text" id="fname" name="firstname" placeholder="Mark John"><br/>
+						<label>Enter your email address</label><br/>
+						<input type="email" id="email" name="email" placeholder="glory@sample.com"><br/>
+						<input type="textarea" id="text" name="text" placeholder="Go ahead we are listening"><br/>
+						<input type="submit" class="button" value="submit">
+					</form>
+				</div>
+				<div class="side-info">
+					<div class="rafiki">
+						{% load static %}
+						<img src="{% static '/images/rafiki.png'%}">
+					</div>
+					<div>
+						<div class="info">
+							{% load static %}
+							<img src="{% static '/images/phone.png'%}" width="21.46px" height="21.5px">
+							<p>+234-804-194-1020</p>
+						</div>
+						<div class="info">
+							{% load static %}
+							<img src="{% static '/images/sms.png'%}" width="21.5px" height="18.5px">
+							<p>support@termscreator.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mailing-address">
+			<h7>Please send general inquiries to: <span>info@termscreator.com<span></h7>
+		</div>
+	</main>
+
+
+<footer>
+      <!-- Flex Container -->
+      <div class="footer-container">
+        <!-- Logo outside container -->
+        <div class="logo-container">
+          <!-- Logo -->
+          	<div class="logo">
+            <img src="{% static '/Logo/Logo-Blue-Yellow.png'%}" alt="logo image" width="224px" height="40px"  />
+        	</div>
+        </div>
+        <!-- List Container -->
+        <div class="">
+          <div>
+          	<ul>
+          		<li><a href="#">About us</a></li>
+          		<li><a href="#">Our Privacy Policy</a></li>
+          		<li><a href="#">Our Terms of Use</a></li>
+          		<li><a href="#">Our Cookies</a></li>
+          		<li><a href="#">Disclaimer Policy</a></li>
+
+          	</ul>
+          </div>
+        </div>
+        <div>  
+          <div class="">
+          	<ul>
+          		<li><a href="#">Privacy Policy Generator</a></li>
+          		<li><a href="#">Terms & Conditions<br />
+             		 Generator</a></li>
+          		<li><a href="#">Return & Refund Policy<br/> Generator</a></li>
+          		<li><a href="#">FAQs</a></li>
+          	</ul> 
+          </div>
+        </div>
+        <div>
+          <div class="">
+          	<ul>
+          		<li><a href="#">Help & Support</a></li>
+          		<li><a href="#">Contact us</a></li>
+          		<li><a href="#">Pricing Plan</a></li>
+				<li><a href="#">Resources</a></li>
+				<li><a href="#">Security FAQ</a></li>
+          	</ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="{% static 'contact.js' %}"></script>
+  </body>
+</html>
