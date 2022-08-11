@@ -9,7 +9,7 @@ from django.views.generic import TemplateView
 
 from .models import t_c_Db  # UserModel
 
-from .models import t_c_Db, PrivacyPolicyQuestions
+from .models import t_c_Db, PrivacyPolicyQuestions, Terms_and_condition
 from django.contrib.auth.models import User, auth
 
 from django.conf import settings
@@ -401,13 +401,29 @@ def employment(request):
 def question1(request):
     if request.method == "POST":
         construction = request.POST["browser"]
-        user = PrivacyPolicyQuestions(userLocate=construction)
-        user.save()
+        if construction == "Construction":
+            user = PrivacyPolicyQuestions(construction="True")
+            user.save()
+        elif construction == "Finance":
+            user = PrivacyPolicyQuestions(finance="True")
+            user.save()
+        elif construction == "employment":
+            user = PrivacyPolicyQuestions(employment="True")
+            user.save()
+        elif construction == "freelancer":
+            user = PrivacyPolicyQuestions(freelancer="True")
+            user.save()
+        elif construction == "saas":
+            user = PrivacyPolicyQuestions(saas="True")
+            user.save()
+        elif construction == "entertainment":
+            user = PrivacyPolicyQuestions(entertainment="True")
+            user.save()
         return render(request, 't-c-preview.html', {'user': user})
 
     else:
         pass
-
+    return render(request, '1collection.html')
 
 
 

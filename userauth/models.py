@@ -14,8 +14,11 @@ class Terms_and_condition(models.Model):
     category = models.CharField(max_length=50, null=False, unique=False)
     tnc_or_policy = models.CharField(max_length=50, null=False, unique=False)
     body = models.TextField(null=False, blank=False)
-    def __str__(self):
-        return self.body
+    class Meta:
+        db_table = "t_C"
+
+        def __str__(self):
+            return self.body
 
 
 class UserModel(models.Model):
@@ -24,9 +27,9 @@ class UserModel(models.Model):
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)
-    contactNumber=models.IntegerField(default=23480000000)
-    company = models.CharField(max_length=150)
-    userAddress=models.CharField(max_length=200)
+    contactNumber = models.IntegerField(default=23480000000)
+    company = models.CharField(max_length=150, null=True)
+    userAddress=models.CharField(max_length=200, null=True)
     businessType =(
         ("CO", "Content Creator"),
         ("BO", "Business Owner"),
@@ -86,10 +89,18 @@ class PrivacyPolicyQuestions(models.Model):
     ("Web", "Website"),
     ("App", "Mobile Application")
 )
-    other_policyUseChoice=models.CharField(max_length=50)
-    userLocate =models.BooleanField()
-    userCreateAccount=models.BooleanField()
-    websiteOffer=models.BooleanField()
+    other_policyUseChoice = models.CharField(max_length=50, null=True)
+    construction = models.BooleanField(null=True)
+    finance = models.BooleanField(null=True)
+    employment = models.BooleanField(null=True)
+    freelancer = models.BooleanField(null=True)
+    health_care = models.BooleanField(null=True)
+    saas = models.BooleanField(null=True)
+    entertainment = models.BooleanField(null=True)
+
+
+    userCreateAccount=models.BooleanField(null=True)
+    websiteOffer=models.BooleanField(null=True)
     personalInfo=(
         ("NA", "Names"),
         ("Phone No", "Phone Number"),
@@ -103,37 +114,22 @@ class PrivacyPolicyQuestions(models.Model):
         ("Bill Ad", "Billing Addresses"),
         ("Cred", "Credit Card Numbers")
     )
-    other_personalInfo=models.CharField(max_length=50)
-    collectPersonalInfo=models.BooleanField()
-    marketingCommnuication=models.BooleanField()
-    acceptPayments=models.BooleanField()
-    containAds=models.BooleanField()
-    upPostContent=models.BooleanField()
-    disclosePerInfo=models.BooleanField()
-    discloseCollectInfo=models.BooleanField()
-    secureMeausre=models.BooleanField()
-    planToUse=(
-        ("Google", "Google or Web Beacons"),
-        ("Apis", "Google Map Apis"),
-        ("Both", "Both"),
-        ("Neith", "Neither")
-    )
-    provideService=models.BooleanField()
-    provideEmailAdd=models.CharField(max_length=50)
-    legalName=models.CharField(max_length=200)
-    tradeNameBusiness=models.BooleanField()
-    companyEmail=models.CharField(max_length=50)
-    phoneNumber=models.IntegerField()
-    fax=models.IntegerField()
+    provideService=models.BooleanField(null=True)
+    provideEmailAdd=models.CharField(max_length=50, null=True)
+    legalName=models.CharField(max_length=200, null=True)
+    tradeNameBusiness=models.BooleanField(null=True)
+    companyEmail=models.CharField(max_length=50, null=True)
+    phoneNumber=models.IntegerField(null=True)
+    fax=models.IntegerField(null=True)
     country=(
         ("AB", "Abia"),
         ("AD", "Adamawa")
         #Tope is to compile all the state names since he is writing it manually. I no get strength abeg - Lola
     )
-    compAddressLine=models.CharField(max_length=200)
-    cityTown=models.CharField(max_length=150)
-    zipCode=models.IntegerField()
-    versionDate=models.DateField()
+    compAddressLine=models.CharField(max_length=200, null=True)
+    cityTown=models.CharField(max_length=150, null=True)
+    zipCode=models.IntegerField(null=True)
+    versionDate=models.DateField(null=True)
 
 
 def decision(self):
