@@ -63,7 +63,7 @@ def reset_password_view(request, pk):
     return render(request, 'reset_password.html', {'form': form})
 
 #Login authenticatin and request
-
+""""
 def login(request):
     if request.method == 'POST':
 
@@ -106,6 +106,7 @@ def login(request):
         else:
             return render(request, 'loginform.html')
 
+"""
 
 #Login authenticatin and request
 def signup(request):
@@ -271,7 +272,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('/me')
+            return redirect('me')
         else:
             messages.info(request, 'Invalid Username or Password')
             return redirect('/signup')
@@ -403,21 +404,25 @@ def question1(request):
         construction = request.POST["browser"]
         if construction == "Construction":
             user = PrivacyPolicyQuestions(construction="True")
+#            user.save(update_fields=["construction"])
             user.save()
         elif construction == "Finance":
             user = PrivacyPolicyQuestions(finance="True")
             user.save()
-        elif construction == "employment":
+        elif construction == "Employment":
             user = PrivacyPolicyQuestions(employment="True")
             user.save()
-        elif construction == "freelancer":
+        elif construction == "Freelancer":
             user = PrivacyPolicyQuestions(freelancer="True")
             user.save()
-        elif construction == "saas":
+        elif construction == "SAAS":
             user = PrivacyPolicyQuestions(saas="True")
             user.save()
-        elif construction == "entertainment":
-            user = PrivacyPolicyQuestions(entertainment="True")
+        elif construction == "Health Care":
+            user = PrivacyPolicyQuestions(health_care="True")
+            user.save()
+        elif construction == "Real estate":
+            user = PrivacyPolicyQuestions(real_estate="True")
             user.save()
         return render(request, 't-c-preview.html', {'user': user})
 
@@ -475,6 +480,14 @@ def signup(request):
     return render(request, 'sign_up.html')
 
 
+def contact_us(request):
+    return render(request, 'contact.html')
 
 
+def question(request):
+    return render(request, 'privacypolicy.html')
+
+
+def question2(request):
+    return render(request, '1collection.html')
 

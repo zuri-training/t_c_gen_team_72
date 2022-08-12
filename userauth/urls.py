@@ -21,8 +21,8 @@ urlpatterns = [
     path("", views.CreateView.as_view(), name="Home"),
 
 
-path("", views.CreateView.as_view(), name="Home"),
-    path("list/", ListTheView.as_view()),
+    path("", views.CreateView.as_view(), name="Home"),
+    path("list/", TermsPoliciesView.as_view()),
 
 path("", views.CreateView.as_view(), name="Home"),
     #path("list/", ListTheView.as_view()),
@@ -57,6 +57,8 @@ path("", views.home.as_view(), name="Home"),
     path("policy", views.policyTest, name="policy"),
 
     path("policy", views.policyTest, name="policy"),
-
+    path("contact-us", views.contact_us),
+    path("question/1", views.question),
+    path("question/2", views.question2),
 ]
 

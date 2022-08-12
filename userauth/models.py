@@ -97,6 +97,7 @@ class PrivacyPolicyQuestions(models.Model):
     health_care = models.BooleanField(null=True)
     saas = models.BooleanField(null=True)
     entertainment = models.BooleanField(null=True)
+    real_estate = models.BooleanField(null=True)
 
 
     userCreateAccount=models.BooleanField(null=True)
