@@ -58,7 +58,7 @@ a span{
     top: -26px;
 }
 #lower-div{
-    height: 250vh;
+    height: 200vh;
     background-color: #B2C9FF;
     display: flex;
     flex-direction: column;
@@ -124,6 +124,7 @@ a span{
     padding: 10px 65px;
     border: 2px solid #154ED4;
     background-color: #FFFFFF;
+    color: #154ED4;
     border-radius:5px;
 }
 .content{
@@ -255,8 +256,8 @@ input[type=text] {
     margin-top: 70px;
   }
   .time{
-    display:flex;
-    justify-content: space-around;
+    /* display:flex;
+    justify-content: space-around; */
     margin-top: 10px;
     margin-left: 60px;
   }
@@ -280,8 +281,11 @@ input[type=text] {
     color: #154ED4;
     font-family: sans-serif;
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 55px;
   }
   .hermes ul:hover{
     cursor: pointer;
+  }
+  .text{
+    width:80%;
   }

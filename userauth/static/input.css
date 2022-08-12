@@ -8,6 +8,16 @@
     background-size: cover;
 }   */
 .rick{
-  background-image: url('../Pictures/Background.png');
+  background-image: url('{% static "../Pictures/Background.png" %}');
   background-size: cover;
+  left: 0;
+  top: 0;
+  background-position: -32px -28px;
+}
+@media screen and (max-width:768px) {
+
+  .rick{
+    background-color: #154ed5;
+    background-image: none;
+  }
 }

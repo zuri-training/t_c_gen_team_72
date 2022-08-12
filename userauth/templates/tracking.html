@@ -3,12 +3,10 @@
 
 <head>
     {% load static %}
-
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/collection.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tracking.css' %}">
     <title>Privacy Policy</title>
 </head>
 
@@ -21,7 +19,7 @@
             </div>
             <div id="user-profile">
                 <span><img src="{% static 'icons/policy_header.svg' %}" alt="User Icon"></span>
-                <span>Privacy Policy Uses</span>
+                <span>Tracking Technology</span>
             </div>
             <div id="lower-div">
                 <a href="#">
@@ -67,7 +65,7 @@
             <div class="inner">
 
                 <h3>Privacy Policy</h3>
-                <p>Collection Of Information</p>
+                <p>Tracking Technology</p>
             </div>
             <div class="inner1">
                 <button>Export </button>
@@ -77,25 +75,25 @@
         <div class="hatt">
             <div class="content">
                 <div>
-                    <p class="Q1">Please select the personal information you <br> collect directly from the user:</p>
+                     <p class="Q1">Which of the following does your<br>website or App use or plan to use?</p>
                     <form>
                         <div class="one">
                             <input type="checkbox" id="" name="q1" value="">
-                            <label for="q1">Names</label>
+                            <label for="q1">Cookies and/or web beacons</label>
                         </div>
                         <div class="one">
                             <input type="checkbox" id="" name="q2" value="">
-                            <label for="q2">Phone numbers</label>
+                            <label for="q2">Google map APIs</label>
                         </div>
                         <div class="one">
                             <input type="checkbox" id="" name="q3" value="">
-                            <label for="q3">Email addresses</label>
+                            <label for="q3">Both</label>
                         </div>
                         <div class="one">
                             <input type="checkbox" id="" name="q3" value="">
-                            <label for="q3">Mailing addresses</label>
+                            <label for="q3">Neither</label>
                         </div>
-                        <div class="one">
+                        <!-- <div class="one">
                             <input type="checkbox" id="" name="q3" value="">
                             <label for="q3">Job titles</label>
                         </div>
@@ -123,22 +121,24 @@
                             <input type="checkbox" id="" name="q3" value="">
                             <label for="q3">Debit/card numbers</label>
                         </div>
-
+ -->
 
 
                     </form>
-                    <p>Add your own</p>
+                    <!-- <p>Add your own</p>
 
                     <div class="thing">
                         <input type="text" placeholder="Add your own">
                         <button>Add</button>
 
 
-                    </div>
+                    </div> -->
+ 
 
+                    <!-- <div>
+                        <p class="Q1">Will you disclose any of your users' <br> personal Information to business affiliates?</p>
+                        <p>Business affiliates include your parent company,<br>subsidiaries, and joint venture partners.</p>
 
-                    <div>
-                        <p class="Q1">Is your website or app offered to users<br> under the age of 18?</p>
                     </div>
                     <div>
                         <input type="radio" id="" name="option1" value="">
@@ -152,7 +152,43 @@
 
 
 
+                    </div> -->
+
+                    <!-- <div>
+                        <p class="Q1">Will you disclose any collected information to business partners?</p>
+
                     </div>
+                    <div>
+                        <input type="radio" id="" name="option1" value="">
+                        <label for="option1">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="option2" value="">
+                        <label for="option2">No</label>
+
+
+
+
+
+                    </div> -->
+
+                    <!-- <div>
+                        <p class="Q1">Do you have appropriate security measures<br> in place that protect your users' personal<br>information?</p>
+
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="option1" value="">
+                        <label for="option1">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="" name="option2" value="">
+                        <label for="option2">No</label>
+
+
+
+
+
+                    </div> -->
                 </div>
 
 
@@ -161,15 +197,12 @@
 
             <div class="second">
                 <img src="{% static 'Pictures/t_and_c.png' %}" alt="">
-                <button>Preview</button>
+                <a href="#"><button>Preview</button></a>
 
 
 
 
-                <div>
-
-                </div>
-
+                
             </div>
 
 
@@ -177,48 +210,47 @@
 
         <div>
             <div class="for-btn">
-                <a href="userInfo.html">
+                <a href="disclosure2.html">
                     <button class="prev">
                         Previous
                     </button>
                 </a>
-
-                <a href="collection2.html">
+                <a href="userRights.html">
                     <button class="potter">
                         Save & Next
                     </button>
+
                 </a>
-                
                 
             </div>
 
 
-            <p class="tips">Tips:</p>
+             <p class="tips">Tips:</p>
             <div class="time">
                 
                 <div >
                     
-                    <p>What is personal Information?</p>
-                    <p> Personal information is information that is linked or reasonably linked,<br> directly or
-                        indirectly, to an identified or identifiable natural person. <br> Personal information can
-                        include: </p>
-                    <ul>
+                    <p>What are Cookies, web beacons, and APIs?</p>
+                    <p> Cookies and web beacons are tracking technologies that are stored on a user's browser or device that allow your<br>
+                    website to remember that user's preferences. If you use analytic services like Google Analytic, you use cookies. </p>
+                    <p>APIs are application programming interfaces. The Google APIs were developed so that third parties could integrate<br> Google services into their own websites and applications. If you use Google Maps or Google Places, you use Google<br>Maps APIs (also known as Google Maps Platform APIs). </p>
+                    <!-- <ul>
                         <li>Personal identifiers (e.g., names, addresses, emails, ID numbers)</li>
                         <li>Photos, sound recordings of voices</li>
                         <li>Internet activity(e.g., internet browsing history, search history, page <br> views)</li>
                         <li>Online identifiers (e.g., IP address, cookie identifiers</li>
                         <li>Geolocation information (can be derived from IP address)</li>
                         <li>Inferences from other personal information</li>
-                    </ul>
+                    </ul> -->
                 </div>
 
-                <div >
+                <!-- <div >
                     <p>What does "collect" mean?</p>
                     <p>Collecting information means you<br> gather details about your users<br> either directly (e.g.,
                         via email,<br> website form, sign-up page, survey) or from other sources<br>(e.g., pubicly
                         available information, data scraping, <br> marketing lists, analytics <br> software)</p>
-                </div>
-            </div>
+                </div> -->
+            </div> 
 
 
             <footer class="hermes">
