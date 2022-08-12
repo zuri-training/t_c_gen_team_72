@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
+
+@mixin flex {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin workSans {
+  font-family: "Work Sans", sans-serif;
+}
+
+@mixin heading1 {
+  font-size: 48px;
+  color: #3b3b3b;
+  font-weight: 400;
+}
+
+@mixin heading2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin subtext {
+  font-size: 14px;
+  color: #595959;
+}
+
+//Variables
+$textAndIconColor: #051333;
+$primaryColor: #113faa;
+$secondaryColor: #195eff;
+$backgroundTerColor: #b2c9ff;
+$policyColor: #d1dfff;
+$policyColorGen: #154ed5;
+$footerColor: #081f55;
+
+//CSS Code Begins
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-size: 16px;
+  @include workSans();
+  padding: 0;
+}
+
+div {
+  border: 0px solid #000;
+}
+
+.policy-container {
+  main {
+    @include flex();
+
+    header {
+      flex-basis: 25%;
+      background-color: $backgroundTerColor;
+
+
+      nav {
+        width: 100%;
+
+        .logo {
+          background-color: $primaryColor;
+          height: 106px;
+
+          img {
+            width: 70%;
+            margin-top: 30px;
+            margin-left: 60px;
+          }
+        }
+
+        .user-profile {
+          background-color: $secondaryColor;
+          width: 100%;
+          @include flex();
+
+          .img {
+            flex-basis: 30%;
+
+            img {
+              width: 50px; //Figma says 56 but screen sizes are not the same
+              height: 50px;
+              margin-top: 10px;
+              margin-left: 60px;
+            }
+          }
+
+          .text {
+            flex-basis: 70%;
+
+            .img-text {
+              line-height: 2.9;
+              margin-left: 5px;
+              color: #fff;
+              @include heading2();
+            }
+          }
+        }
+
+        .nav-click-mb {
+          display: none;
+        }
+
+        .nav-links {
+          width: 100%;
+          background-color: $backgroundTerColor;
+
+          .nav-links-container {
+            margin-top: 70px;
+            @include flex-wrap;
+
+            .active {
+              flex-basis: 100%;
+              @include flex();
+
+              .icon {
+                flex-basis: 30%;
+                height: 60px;
+
+                img {
+                  width: 24px;
+                  height: 24px;
+                  margin-top: 10px;
+                  margin-left: 60px;
+                }
+              }
+
+              .text {
+                flex-basis: 70%;
+
+                .icon-text {
+                  line-height: 2.7;
+                  text-decoration: none;
+                  color: $textAndIconColor;
+                  height: 60px;
+                }
+              }
+            }
+
+            .active:hover {
+              background-color: #fff;
+              box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+            }
+          }
+        }
+
+        .footer-icons-mb {
+          display: none;
+        }
+      }
+    }
+
+    aside {
+      flex-basis: 75%;
+
+      section {
+        width: 100%;
+        @include flex-wrap();
+
+        .search-bar {
+          flex-basis: 100%;
+
+          .search-bar-contain {
+            width: 40px;
+            margin-left: 60px;
+            margin-top: 20px;
+            padding: 10px;
+            height: 40px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+
+            img {
+              display: block;
+              margin: 0 auto;
+              margin-top: 3px;
+            }
+          }
+        }
+
+        .policy-text {
+          flex-basis: 100%;
+
+          h1 {
+            @include heading1();
+            margin-left: 60px;
+            margin-top: 20px;
+          }
+        }
+
+        .policy-subtext {
+          flex-basis: 100%;
+
+          .policy-img {
+            margin-left: 60px;
+            margin-top: 40px;
+          }
+
+          .policy-txt {
+            @include subtext();
+            margin-left: 60px;
+          }
+        }
+
+        .tandcgencontain {
+          flex-basis: 50%;
+
+          .tcgen {
+            width: 70%;
+            min-height: 350px;
+            margin-left: 60px;
+            border-radius: 10px;
+            background-color: $policyColor;
+            @include flex();
+
+            .txt-container {
+              flex-basis: 100%;
+
+              .generator {
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+                width: 65%;
+              }
+
+              button {
+                border: 1px solid #0000D4;
+                border-radius: 5px;
+                width: 50%;
+                padding: 10px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 10px;
+                background-color: transparent;
+                font-weight: 500;
+
+                a {
+                  text-decoration: none;
+                  color: #0000D4;
+                }
+              }
+
+              .icon-add {
+                display: block;
+                margin: 0 auto;
+                margin-top: 50%;
+              }
+
+              p {
+                text-align: center;
+                color: $policyColorGen;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .new-row {
+          margin-top: 40px;
+        }
+      }
+
+      footer {
+        width: 100%;
+        @include flex-wrap();
+
+        .footer {
+          flex-basis: 100%;
+          margin-top: 100px;
+
+          p {
+            text-align: center;
+            color: $footerColor;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .policy-container {
+    main {
+      header {
+        flex-basis: 20% !important;
+
+        nav {
+          .logo {
+            display: none;
+          }
+
+          .user-profile {
+            display: none !important;
+          }
+
+          .nav-links {
+            .nav-links-container {
+              .active {
+                .icon {
+                  flex-basis: 100%;
+
+                  img {
+                    margin-left: 0px;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                  }
+                }
+
+                .text {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .nav-click-mb {
+            @include flex;
+
+
+            .icons {
+              flex-basis: 100%;
+              margin-top: 50px;
+
+              img {
+                display: block;
+                margin: 0 auto;
+                width: 40%;
+
+              }
+            }
+          }
+
+          .footer-icons-mb {
+            @include flex-wrap();
+            margin-top: 100vh;
+
+            .icons {
+              flex-basis: 100%;
+
+              a {
+                display: block;
+                text-align: center;
+
+                .user-icon {
+                  padding: 10px;
+                  width: 70%;
+                }
+
+                .logout-icon {
+                  padding: 10px;
+                  border: 1px solid #FFFFAA;
+                  background-color: #FFFFAA;
+                  border-radius: 8px;
+                  width: 60%;
+                  box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+                  margin-top: 20px;
+                }
+              }
+
+
+            }
+          }
+        }
+      }
+
+      aside {
+        flex-basis: 80%;
+
+        section {
+          .search-bar {
+            .search-bar-contain {
+              margin-left: 20px;
+            }
+          }
+
+          .policy-text {
+            h1 {
+              font-size: 18px;
+              margin-left: 20px;
+            }
+          }
+
+          .policy-subtext {
+            .policy-img {
+              margin-left: 20px;
+              margin-top: 20px;
+
+              span {
+                font-weight: 500;
+              }
+            }
+
+            .policy-txt {
+              margin-left: 20px;
+              font-size: 12px;
+            }
+          }
+
+          .tandcgencontain {
+            flex-basis: 100%;
+
+            .tcgen {
+              width: 80%;
+              margin-left: 0px;
+              margin: 0 auto;
+              margin-top: 20px;
+
+              .txt-container {
+                .generator {
+                  margin-top: 40px;
+                }
+
+                .icon-add {
+                  margin-top: 55%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

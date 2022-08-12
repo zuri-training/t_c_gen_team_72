@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+   /* width: 70%;
+    /* height: 5%; 
+    border: 10px white;
+    margin: auto;
+    /* margin-top: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background-color: rgb(145, 143, 143);
+    background-size: 70%;*/
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    background: #ffffff;
+    /*margin-top: 40px;*/
+  }
+  
+  .bar {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image {
+    width: 90%;
+    height: 75px;
+    background: #195eff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .image > img {
+    margin-right: 5px;
+    padding-left: 3px;
+    border-radius: 50%;
+  }
+  
+  .image > p {
+    width: 130px;
+    height: 28px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding-left: 5px;
+  }
+  
+  .main {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 100%;
+    height: 80%;
+  }
+  
+  .footer {
+    width: 100%;
+    margin-top: 173px;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 70px;
+    padding-top: 5px;
+  }
+  
+  .header {
+    padding-bottom: 10px;
+    padding-left: 80px;
+  }
+  
+  .tab {
+    width: 400px;
+    margin: 80px auto 0 auto;
+    height: 70px;
+    background: rgba(178, 201, 255, 0.35);
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  .tab > h1 {
+    width: 78%;
+    align-self: flex-end;
+    padding-left: 3px;
+    height: 30px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #0d2f80;
+    mix-blend-mode: normal;
+    font-family: Work Sans;
+    letter-spacing: 0.25px;
+
+  }
+  
+  .tab > img {
+    width: 90px;
+    height: 70px;
+    background-color: rgb(41, 53, 221);
+  }
+  
+  .content {
+    display: flex;
+    margin-top: 80px;
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  form {
+    width: 335px;
+    margin: auto;
+  }
+  
+  .footer > p {
+    margin: auto;
+    padding: 8px;
+    width: 242px;
+    height: 19px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    align-items: center;
+    letter-spacing: 0.5px; 
+  
+    /* Primary Color/1000 */
+    color: #081f55;
+  }
+  
+  button {
+    align-items: center;
+    padding: 16px;
+    width: 148px;
+    height: 48px;
+    /* Primary Color/700 */
+    background: #154ed5;
+    border-radius: 8px;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 90%;
+    height: 120px;
+    background: #113faa;
+  }
+  
+  .logo > img {
+    display: block;
+    width: 150px;
+    height: 30px;
+    color: #ffffff;
+    margin: 69px auto 69px auto;
+  }
+  
+  ul {
+    width: 100%;
+    margin-top: 82px;
+    background: #b2c9ff;
+    padding: 40px 0 40px 0;
+  }
+  .nav {
+    background: #b2c9ff;
+    width: 90%;
+    height: 20%;
+    
+  }
+  ul > li {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  li:hover {
+    background-color: #ffffff;
+  }
+  
+  li > img {
+    display: block;
+    margin-right: 8px;
+    height: 30px;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    padding-top: 2px;
+    color: #0d2f80;
+    width: 88px;
+    height: 19px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #051333;
+  }
+  
+  #btn {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: auto;
+  }
+  .but2 {
+    width: 50%;
+    border: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .word {
+    text-align: center;
+    align-items: center;
+  }

@@ -1,0 +1,340 @@
+/* Desktop View */
+body{
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    overflow-x: hidden;
+}
+#left{
+    width: 600px;
+    height: 982px;
+    background: url("/static/Pictures/lady_on_phone.png") #154ED4 ;
+    background-blend-mode:soft-light;
+    background-size: 760.38px 1048.61px;
+    background-position: -100px -10px;
+}
+#logo{
+    width: 280px;
+    height: 41.2px;
+    position: absolute;
+    left: 175px;
+    top: 103px;
+}
+#text{
+    color: #ffffffe5;
+    position: absolute;
+    width: 386px;
+    height: 114px;
+    left: 126px;
+    top: 420px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+}
+#right{
+    position: absolute;
+    width: 600px;
+    height: 762px;
+    left: 694px;
+    top: 128px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;    
+}
+#right-div{
+    width: 698px;
+    height: 558px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 48px;
+}
+form{
+    width: 100%;
+    height: 544px;
+}
+#register p:nth-of-type(1){
+    font-size: 32px;
+    font-family: 'Work Sans';
+    font-weight: 400;
+    margin-bottom:0 ;
+    line-height: 38px;
+    font-style: normal;
+    letter-spacing: 0.25px;
+    color: #081F55;
+}
+#register p:nth-of-type(2){
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #1E1E1E;
+}
+fieldset{
+    border: none;
+    width: 100%;
+    margin-top: 1em;
+    height: 308px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin-bottom: 5em;
+}
+fieldset div{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    height: 73px;
+}
+fieldset div p{
+    width: 341px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Work Sans';
+    font-style: normal;
+}
+fieldset div p label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+}
+fieldset div p input, fieldset div p select{
+    box-sizing: border-box;
+    width: 100%;
+    height: 46px;
+    border: 1px solid #757575;
+    border-radius: 8px;
+    font-family: 'Work Sans';
+    padding-left: 16px;
+}
+fieldset div p input::placeholder,{
+    color: #757575;
+    font-family: 'Work Sans';
+}
+#checkbox{
+    height: 17px;
+    font-family: 'Work Sans';
+}
+#checkbox input{
+    position: relative;
+    top: 2px;
+}
+#submit{
+    width: 100%;
+    height: 47px;
+    background: #154ED5;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.25px; 
+    color: #FFFFFF;
+}
+#login{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #2D2D2D;
+}
+a{
+    text-decoration: none;
+    color: #154ED4;
+}
+
+/* Mobile View */
+@media (min-width:280px) and (max-width:800px){
+    body{
+        min-width: 280px;
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #left{
+        width: 105%;
+        height: 343px;
+        background: #154ED4 url("/static/Pictures/lady_on_phone.png") ;
+        background-blend-mode:soft-light;
+        background-size: 100% 515px;
+        background-position: 3px 75px;
+        background-repeat: no-repeat;
+    }
+    #logo{
+        width: 80%;
+        height: 30px;
+        position: absolute;
+        left: 32px;
+        top: 25px;
+    }
+    #text{
+        color: #ffffcc;
+        position: absolute;
+        width: 90%;
+        height: 76px;
+        left: 25px;
+        top: 70px;
+        padding: 0px;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: left;
+        text-align: left;
+        letter-spacing: 0.25px;
+    }
+    #text::first-line{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+    #right{
+        position: absolute;
+        height: 764px;
+        left: 4.5%;
+        top: 200px;  
+        z-index: 2;  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 32px;    
+    }
+    #right-div{
+        width: 100%;
+        height: 713px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+    }
+    form{
+        width: 100%;
+        height: 650px;
+    }
+    #register p:nth-of-type(1){
+        font-size: 28px;
+        line-height: 28px;
+        color: #ffffff;
+    }
+    #register p:nth-of-type(2){
+        font-size: 18px;
+        line-height: 17px;
+        letter-spacing: 0.25px;
+        color: #ffffff;
+    }
+    fieldset{
+        margin-top: 5.5em;
+        height: 530px;
+        margin-bottom: 5em;
+    }
+    fieldset div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: 154px;
+    }
+    fieldset div p{
+        width: 95%;
+        height: 73px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    fieldset div p input{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    #checkbox{
+        height: 17px;
+        font-family: 'Work Sans';
+    }
+    #submit{
+        width: 95%;
+        height: 47px;
+        background: #154ED5;
+        border-radius: 8px;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        letter-spacing: 1.2px; 
+        color: #FFFFFF;
+        margin-bottom: 7em;
+    }
+    #login{
+        margin: 10em 0 0 0;
+        width: 271px;
+        height: 19px;
+        letter-spacing: 0.5px;
+        align-items: center;
+        color: #2D2D2D;
+        padding-left: 3em;
+    }
+    a{
+        text-decoration: none;
+        color: #154ED4;
+    }
+}
+@media (min-width:280px) and (max-width:320px){
+    #left{
+        width: 215%;
+    }
+}
+@media (min-width:321px) and (max-width:370px){
+    #left{
+        width: 210%;
+    }
+    fieldset div p{
+        width: 110%;
+    }
+    #submit{
+        width: 110%;
+    }
+}
+@media (min-width:371px) and (max-width:420px){
+    #left{
+        width: 180%;
+    }
+    fieldset div p{
+        width: 110%;
+    }
+    #submit{
+        width: 110%;
+    }
+}
+@media (min-width:421px) and (max-width:570px){
+    #left{
+        width: 190%;
+    }
+    fieldset div p{
+        width: 125%;
+    }
+    #submit{
+        width: 125%;
+    }
+}

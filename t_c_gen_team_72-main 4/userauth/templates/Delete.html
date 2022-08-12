@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- you can link your css or bootstrap-->
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %} <!-- Security Measure to protect the Form -->
+
+        {{ form.as_p }}  <!-- form.as_p its a django form attribute that let display data from db as the <p> tag-->
+        <input type="submit" value="Delete">
+    </form>
+
+</body>
+</html>

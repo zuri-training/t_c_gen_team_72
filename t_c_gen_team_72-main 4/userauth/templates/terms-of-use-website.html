@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of use</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'terms-of-use-website.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+</head>
+<body>
+        <div id="myNav" class="overlay">
+            {% load static %}
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <div id="logo-div">
+                    {% load static %}
+                    <img src="{% static 'Logo/logo-white-yellow.png' %}" alt="TermsCreator Logo" id="logo">
+                </div>
+                <div id="user-panel">
+                    {% load static %}
+                    <span><img src="{% static 'icons/website.svg' %}" alt="User Picture"></span>
+                    <span>Website</span>
+                </div>
+                <div id="lower-div">
+                    <a href="">Website</a>
+                    <a href="">Application</a>
+                    <a href="">Additional</a>
+                    <a href="">Business Information</a>
+                </div>
+            </div>
+        </div>
+    <!-- This div is for the side-bar -->
+    <nav id="side-bar">
+        <!-- This div contains the white logo -->
+        <div id="logo-div">
+            {% load static %}
+            <img src="{% static 'Logo/logo-white-yellow.png' %}" alt="TermsCreator Logo" id="logo">
+        </div>
+        <div id="user-panel">
+            <!-- img below is for your task icon -->
+            {% load static %}
+            <span><img src="{% static 'icons/website.svg' %}" alt="User Picture"></span>
+            <!-- Change the word below to your task -->
+            <span>Website</span>
+        </div>
+        <div id="lower-div">
+            <a href="">Website</a>
+            <a href="">Application</a>
+            <a href="">Additional</a>
+            <a href="">Business Information</a>
+        </div>
+    </nav>
+    <!-- This div is for the mainpage content -->
+    <nav id="menu-nav">
+        {% load static %}
+        <img src="logo-white-yellow.png" alt="Logo" id="menu-logo">
+        {% load static %}
+        <img src="{% static 'icons/menu_burger.svg' %}" alt="Menu-bar" id="menu" id="bar" onclick="openNav()">
+    </nav>
+    <main id="main-page">
+        <div id="first">
+            <div id="first-left">
+                <h2>Terms of use</h2>
+                <p>Website</p>
+            </div>
+            <div id="first-right">
+                <a href="dashboard.html">
+                    {% load static %}
+                    <img src="{% static 'icons/arrow-left.svg' %}" alt="Arrow-left">
+                    BACK TO DASHBOARD
+                </a>
+                <p for="progress progress-option">
+                    <span class="progress-texts">Progress</span>
+                    <span id="progress-bar">
+                        <progress id="progress" value="0" max="100"></progress>    </progress>
+                    </span>
+                    <span class="progress-texts">Complete</span>
+                </p>
+                <p>
+                <input type="radio" name="progress-option" id="" value="25" class="completion-level">
+                <input type="radio" name="progress-option" id="" value="50">
+                <input type="radio" name="progress-option" id="" value="75">
+                <input type="radio" name="progress-option" id="" value="100">
+                </p>
+                <a href="export-option.html"><button>
+                    Export
+                </button></a>
+            </div>
+        </div>
+        <div id="second">
+            <div id="second-left">
+            <!-- Chage the element below to suit your task -->
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <label for="business-name">What is your business name?</label>
+                        {{ form.business-name }}
+                        <input type="text" name="business-name" id="business-name" placeholder="Faith & Co Ltd." required>
+                    </p>
+                    <p>
+                        <label for="business-address">What is your business address</label>
+                        {{ form.business-address }}
+                        <input type="text" name="business-address" id="business-address" placeholder="22,adedi street teren bustop.lagos" required>
+                    </p>
+                    <p>
+                        <label for="website-name">What is your website name?</label>
+                        {{ form.website-name }}
+                        <input type="text" name="website-name" id="website-name" placeholder="perfumegroup." required>
+                    </p>
+                    <p>
+                        <label for="website-URL">What is your website URL?</label>
+                        {{ form.website-URL }}
+                        <input type="text" name="website-URL" id="website-URL" placeholder="https://www.perfumegroup.com" required>
+                    </p>
+                </form>
+            </div>
+            <div id="second-right">
+                {% load static %}
+                <img src="{% static 'Pictures/image.svg' %}" alt="Image with texts">
+                <button>Preview</button>
+            </div>
+        </div>
+        <div id="third">
+            <a href="" id="third-left">
+                <!-- <button>
+                    <img src="" alt="">Previous
+                </button> -->
+            </a>
+            <a href="" id="third-right">
+                {% load static %}
+                <button>
+                    Save & Next<img src="{% static 'icons/arrow-right.svg' %}" alt="Arrow-left">
+                </button>
+            </a>
+        </div>
+        <footer>
+            <a href="policy.html">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+            <a href="">Disclaimer</a>
+            <a href="">Cookie Policy</a>
+        </footer>
+    </main>
+    {% load static %}
+    <script src="{% static 'terms-of-use-website.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+a. I created the security and faqs frontend page. -HTML https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/security%26faqs.html
+                                                -CSS https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/sec%26faqs.css
+b. I worked on the backend authentification of the sign-up page https://github.com/zuri-training/t_c_gen_team_72/issues/46
+c. I am currently creating an api for download and export of pdf files(still ongoing) https://github.com/zuri-training/t_c_gen_team_72/issues/48

@@ -1,0 +1,38 @@
+1. About us page:
+        HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/about-us.html
+        CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/about-us.css
+        JS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/about-us.js
+
+        
+2. Sign up page:
+        HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/sign_up.html
+        CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/sign_up.css
+        JS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/signup.js
+
+
+3. Password Succes Modal page:
+        HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/password-success-modal.html
+        CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/password-success-modal.css
+
+
+4. Terms and Condition Preview pagw:
+        HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/t-c-preview.html
+        CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/t-c-preview.css
+        JS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/t-c-preview.js
+
+
+5. Terms of Use page:
+    I   created this as a template for other pages edited by other developers to
+    suit their tasks. So I created the website page.
+        HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/terms-of-use-website.html
+        CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/terms-of-use-website.css
+        JS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/t-c-preview.js
+
+
+6. New Password page:
+        HTML: I included the logo_white_yellow and #footer-links, check here
+                https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/new_password.html
+        CSS: I added the styled the codes I added to the html file and also added the responiveness in the file.
+                Check from line 137 where the #foot begins here https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/new_password.css
+
+    

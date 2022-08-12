@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+}
+
+div {
+  border: 1px solid #000;
+}
+
+.policy-container main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.policy-container main header {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  background-color: #b2c9ff;
+}
+
+.policy-container main header nav {
+  width: 100%;
+}
+
+.policy-container main header nav .logo {
+  background-color: #113faa;
+  height: 106px;
+}
+
+.policy-container main header nav .logo img {
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.policy-container main header nav .user-profile {
+  background-color: #195eff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.policy-container main header nav .user-profile .img {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.policy-container main header nav .user-profile .img img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.policy-container main header nav .user-profile .text {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.policy-container main header nav .user-profile .text .img-text {
+  line-height: 2.9;
+  margin-left: 5px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.policy-container main header nav .nav-links {
+  width: 100%;
+  background-color: #b2c9ff;
+}
+
+.policy-container main header nav .nav-links .nav-links-container {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .icon,
+.policy-container main header nav .nav-links .nav-links-container .icon-text {
+  height: 60px;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .icon {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .icon img {
+  width: 24px;
+  height: 24px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .text {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .text .icon-text {
+  line-height: 2.7;
+  text-decoration: none;
+  color: #051333;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .active {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .active .icon {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.policy-container main header nav .nav-links .nav-links-container .active .text {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.policy-container main aside {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+.policy-container main aside section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.policy-container main aside section .search-bar {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.policy-container main aside section .search-bar .search-bar-contain {
+  width: 40px;
+  margin-left: 60px;
+  margin-top: 20px;
+  padding: 10px;
+  height: 40px;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
+}
+
+.policy-container main aside section .search-bar .search-bar-contain img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+
+.policy-container main aside section .policy-text {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.policy-container main aside section .policy-text h1 {
+  font-size: 48px;
+  color: #3b3b3b;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+.policy-container main aside section .policy-subtext {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.policy-container main aside section .policy-subtext .policy-img {
+  margin-left: 60px;
+  margin-top: 40px;
+}
+
+.policy-container main aside section .policy-subtext .policy-txt {
+  font-size: 14px;
+  color: #595959;
+  margin-left: 60px;
+}
+
+.policy-container main aside section .tandcgencontain {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen {
+  width: 70%;
+  min-height: 350px;
+  margin-left: 60px;
+  border-radius: 10px;
+  background-color: #d1dfff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container .generator {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 65%;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container button {
+  border: 2px solid #0000D4;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container button a {
+  text-decoration: none;
+  color: #0000D4;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container .icon-add {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50%;
+}
+
+.policy-container main aside section .tandcgencontain .tcgen .txt-container p {
+  text-align: center;
+  color: #154ed5;
+  font-weight: 500;
+}
+
+.policy-container main aside section .new-row {
+  margin-top: 40px;
+}
+
+.policy-container main aside footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.policy-container main aside footer .footer {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 100px;
+}
+
+.policy-container main aside footer .footer p {
+  text-align: center;
+  color: #081f55;
+  font-weight: 400;
+}
+/*# sourceMappingURL=policy.css.map */

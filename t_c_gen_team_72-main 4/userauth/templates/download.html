@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'download.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bar">
+            <div class="logo">
+                {% load static %}
+                <img src="{% static 'img/logoterms.png' %}" alt="">
+
+            </div>
+            <div class="image">
+                {% load static %}
+                <img src="{% static 'img/folder-add.svg' %}" alt="" srcset="">
+                <p>
+                    Downloads
+                </p>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        {% load static %}
+                        <img src="{% static 'img/folder-2.png' %}" alt="" srcset="">
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
+                        {% load static %}
+                        <img src="{% static 'img/clipboard-tick.png' %}" alt="" srcset="">
+                        <a href="policy.html">Policies</a>
+                    </li>
+                    <li>
+                        {% load static %}
+                        <img src="{% static 'img/profile.png'%}" alt="" srcset="">
+                        <a href="dashboard.html">My Profile</a>
+                    </li>
+                    <li>
+                        {% load static %}
+                        <img src="{% static 'img/document-download.png' %}" alt="" srcset="">
+                        <a href="download.html">Download</a>
+                    </li>
+                    <li>
+                        {% load static %}
+                        <img src="{% static 'img/save-2.png' %}" alt="" srcset="">
+                        <a href="saved.html">Saved</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box">
+                <div class="header">
+                    <div class="tab">
+                        <h1>
+                            My Downloads
+                        </h1>
+                        <div class="plain">
+                            {% load static %}
+                            <img src="{% static 'img/download wyt.svg' %}" alt="" />
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="edit">
+                        <form action="" method="post">
+                            <div class="par">
+                                <p>You currently don't have any downloaded policy.<br>
+                                </p>
+                            </div>
+                            <div class="word">
+                                <p>You're a few clicks away from you generating your professional policies.</p>
+                            </div><br>
+                            <button type="submit" class="but2">Generate</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    Copywrite 2022 TermsCreator
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
