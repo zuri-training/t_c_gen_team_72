@@ -30,7 +30,7 @@ class CreateView(CreateView):  # Creates the view to insert text to database
     fields = [
         "title", "description"
     ]
-    template_name = 'landingPage.html'
+    template_name = 'index.html'
     success_url = 'list'
 
 

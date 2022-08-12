@@ -1,6 +1,5 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -24,12 +23,20 @@ a{
     box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
 }
 
+.mobile{
+    display: none;
+}
+
 img{
     display: block;
     width:224px;
     height: 40px;
     margin-left: 80px;
     margin-top:20px
+}
+
+.head{
+    display: none;
 }
 
 .main{
@@ -164,7 +171,7 @@ button{
 
 .span2{
     display: inline-flex;
-    width: 141px;
+    width: 170px;
     height: 14px;
     float: right;
 
@@ -201,5 +208,107 @@ button{
     align-items: center;
     letter-spacing: 0.5px;
     color: #000000;
+
+}
+
+@media screen and (max-width: 1250px){
+    .main{
+        display: flex;
+        flex-direction: row;
+        height: 87vh;
+        background-image:url("Pictures/Herocurveshape.png"), url("Pictures/unsplash_npxXWgQ33ZQ.png");
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 500px 100%, 400px 100%;
+        /*background-size: contain;*/
+        background-position: right bottom, right bottom;;
+        background-blend-mode: multiply;
+    }
+
+    .form{
+        width:341px;
+        height: 80%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+@media screen and (max-width: 790px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: #FFFFFF ;
+    }
+    .logo{
+        height: 100px;
+        box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+        background-color: #0000D5;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    img{
+        display: block;
+        width:224px;
+        height: 40px;
+        margin-left: 32px;
+        margin-top:40px
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+
+    }
+
+    .head{
+        display: block;
+        color: #FFFFFF;
+        width:100%;
+        height:400px;
+        background-image:url("images/loginWelcomescreen@2x.png");
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+
+    .head>h4{
+        display: block;
+        color: #FFFFFF;
+        margin-top: 250px;
+        margin-left: 70px;
+    }
+
+    .head>p{
+        margin-top: 15px;
+        margin-left: 70px;
+    }
+
+    .side1{
+        flex: 1;
+        height:100%;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+    }
+
+    .side2, h4{
+        display: none;
+    }
+
+    .signin{
+        margin-bottom: 50px;
+    }
 
 }
