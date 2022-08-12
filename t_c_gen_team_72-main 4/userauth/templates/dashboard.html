@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Work+Sans:400,700&display=swap" rel="stylesheet">    
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'dashboard.css' %}" />
+	<title>Dashboard-Main</title>
+</head>
+<body>
+		<header class="header">
+			<div class="logo">
+				<div class="logo-img">
+					{% load static %}
+					<img src="{% static '/Logo/logo TERmS WY.png'%}" class="logo-img">
+				</div>
+			</div>
+			<div class="profile">
+				<div class="avatar">
+					<div class="profile-pic">
+						{% load static %}
+						<img src="{% static '/icons/user.svg' %}" id="pic">
+					</div>
+					<div class="name">
+						<h5>Hello Musa</h5>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="dashboard-items">
+				<a href="#about">{% load static %}<img src="{% static '/icons/policies.png' %}" class="icons">Dashboard</a>						
+				
+				</div>
+
+				<div class="dashboard-items">
+					
+					<a href="#services">{% load static %}<img src="{% static '/icons/clipboard-tick.png' %}" class="icons">Policies</a>
+				</div>
+
+				<div class="dashboard-items">
+					
+					<a href="#clients">{% load static %}<img src="{% static '/icons/user.svg' %}" class="icons">My Profile</a>
+				</div>
+				<div class="dashboard-items">
+					
+					<a href="#contact">{% load static %}<img src="{% static '/icons/document-download.svg' %}" class="icons">Downloads</a>
+				</div>
+				<div class="dashboard-items">
+					
+					<a href="#">{% load static %}<img src="{% static '/icons/save-2.svg' %}" class="icons">Saved</a>
+				</div>
+
+				<div class="logout">
+					
+					<a href="">{% load static %}<img src="{% static '/icons/arrow-right.png' %}" class="icons">Log Out</a>
+		  		</div>
+				
+		  		
+			
+			</div>
+			
+		</header>
+
+		<main>
+			<div class="search">  
+			    <input type="text" class="input" placeholder="Search...">  
+			    <button class="btn">
+			    {% load static %}
+			    <img src="{% static '/icons/search-normal.png' %}">  
+			      
+			    </button>  
+			 </div>  
+
+			 <div class="greetings">
+				<h3>We're sure you will have a great time here using TermCreator!</h3>
+			</div>
+
+			<div class="policy">
+				<div class="tick">
+					{% load static %}
+					<img src="{% static '/icons/clipboard-tick.png' %}" id="policy">
+					<div class="header2">
+						<h4 >Policies</h4>
+					</div>
+					
+				</div>
+				<p id="text">Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+			</div>
+
+			<div class="selection">
+				<div class="box">
+					{% load static %}
+					<img src="{% static '/icons/add.png' %}" class="add">
+					<p class="terms">
+						Terms and Conditions
+					</p>
+				</div>
+				<div class="box">
+					{% load static %}
+					<img src="{% static '/icons/add.png' %}" class="add">
+					<p class="terms">
+						Privacy Policy
+					</p>
+				</div>
+			</div>
+
+			<div class="selection">
+				<div class="box">
+					{% load static %}
+					<img src="{% static '/icons/add.png' %}" class="add">
+					<p class="terms">
+						Terms of Use
+					</p>
+				</div>
+				<div class="box">
+					{% load static %}
+					<img src="{% static '/icons/add.png' %}" class="add">
+					<p class="terms">
+						Return and Refund Policy
+					</p>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<small>Copyright 2022 TermsCreator</small>
+			</div>
+
+	
+
+		</main>
+
+		{% load static %}
+		<script src="{% static 'dashboard.js' %}"></script>
+</body>
+</html>

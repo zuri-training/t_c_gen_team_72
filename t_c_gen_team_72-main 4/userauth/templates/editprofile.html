@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editprofilestyle.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'editprofilestyle.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bar">
+            <div class="logo">
+
+                <img src="{% static 'Logo/LogoTERmS.png' %}" alt="">
+            </div>
+            <div class="image">
+                <img src= "{% static 'Logo/UserpictureFrame.png' %}" alt="" srcset="">
+                <p>
+                    Hello Musa
+                </p>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <img src="{% static 'Logo/folder-2.png' %}" alt="" srcset="">
+                        <a>Dashboard</a>
+                    </li>
+                    <li>
+                        <img src="{% static 'Logo/clipboard-tick.png' %}" alt="" srcset="">
+                        <a>Policies</a>
+                    </li>
+                    <li>
+                        <img src="{% static 'Logo/profile.png' %}" alt="" srcset="">
+                        <a>My Profile</a>
+                    </li>
+                    <li>
+                        <img src="{% static 'Logo/document-download.png' %}" alt="" srcset="">
+                        <a>Download</a>
+                    </li>
+                    <li><img src="{% static 'Logo/save-2.png' %}" alt="" srcset="">
+                        <a>Saved</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="box">
+                <div class="header">
+                    <div class="tab">
+                        <h1>
+                            Edit Bio
+                        </h1>
+                        <p>
+                            Edit profile picture
+                        </p>
+                        <img src="{% static 'Pictures/Frame527.png' %}" alt=""/>
+
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="edit">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            <p class="label">
+                                Name
+                            </p>
+                            <input type="text" name="name" id="" placeholder="name" required class=""><br>
+
+                            <p class="label">
+                                Email Address
+                            </p>
+                            <input type="email" name="email" id="" placeholder="name@gmail.com" required class=""><br>
+                            <p class="label">
+                                Company Name
+                            </p>
+                            <input type="text" name="company" id="" placeholder="Enter your company name" required class=""><br>
+                            <p class="label">
+                                Business Type
+                            </p>
+                            <input type="text" name="business" id="" placeholder="Enter your business name" required class=""><br>
+                            <p class="label">
+                                Address
+                            </p>
+                            <input type="text" name="Address" id="" placeholder="name" required class="field"><br>
+
+                            <p class="label ">
+                                Phone Number
+                            </p>
+                                <div class="phone">
+                                    <input type="text" name="" id="" placeholder="+234">
+                                    <input type="tel" name="number" id="" class="field" required placeholder="54765985906"><br>
+                                </div>
+                            <p class="label">
+                                State
+                            </p>
+
+                            <select name="Languages" id="select_languages">
+                                <option value="">State</option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa ">Adamawa </option>
+                                <option value="Akwa Ibom ">Akwa Ibom </option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa ">Bayelsa </option>
+                                <option value="Benue">Benue</option>
+                                <option value="Cross River ">Cross River </option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="FCT (ABUJA)">FCT (ABUJA)</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                            </select>
+                            <p class="but">
+                                <button type="submit" class="but1">Cancel</button>
+                                <button type="submit">Save</button><br>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="password">
+                        <form action="" method="post">
+                            <p class="label">
+                                Current Password
+                            </p>
+                                <input type="password" name="" id="" class="field" required placeholder="minimum of 8 characters"><br>
+                            <p class="label">
+                                New Password
+                            </p>
+                                <input type="password" name="" id="" class="field" required placeholder="minimum of 8 characters"><br>
+                            <p class="label">
+                                Confirm Password
+                            </p>
+                                <input type="password" name="" id="" class="field" required placeholder="minimum of 8 characters"><br>
+                                <button type="submit" class="but2">Reset</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    Copyright 2022 TermsCreator
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

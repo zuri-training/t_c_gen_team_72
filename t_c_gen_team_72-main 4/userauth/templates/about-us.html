@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'about-us.css'%}">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <title>About Us</title>
+</head>
+
+<body id="body">
+    <div>
+        <div id="myNav" class="overlay">
+            {% load static %}
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="">Products</a>
+              <a href="">Resources</a>
+              <a href="contact.html">Contact us</a>
+              <a href="loginform.html">Login</a>
+              <a href="sign_up.html" id="bar-start">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <nav id="navbar">
+        <div>
+            {% load static %}
+            <img src="{% static 'Logo/logo_white.png' %}" alt="Logo" id="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="">Products</a>
+            <a href="">Resources</a>
+            <a href="contact.html">Contact us</a>
+            <a href="loginform.html">Login</a>
+            <a href="sign_up.html" id="start">Get Started</a>
+            <p id="bar" onclick="openNav()">
+                {% load static %}
+                <img src="{% static 'icons/menu_burger.svg' %}" alt="Menu Burger">
+            </p>
+        </div>
+    </nav>
+    <main>
+        <div id="about-us">
+            <h1>ABOUT US</h1>
+            <p>Creating your terms for you...</p>
+        </div>
+        <section>
+            <div class="box box1">
+                <div class="left-box">
+                    {% load static %}
+                    <img src="{% static 'Logo/logo-blue-yellow.png' %}" alt="Logo">
+                </div>
+                <div class="right-box">
+                    <p>
+                        TermsCreator is a platform that was developed by a group of creators who wanted to have a
+                        website that will help business to help their clients trust them with their information easily.
+                    </p>
+                    <p>
+                        These creators themselves had different irksome ordeals in the past with clients because they
+                        did not have a well stated privacy policy, terms and condition. Aside this some privacy policy
+                        generator sites did not make it easy for them ecause some of them were not easy to naviagate and
+                        they had to fill cumbersome information before they could generate the policies.
+                    </p>
+                </div>
+            </div>
+            <div class="box box2">
+                <div class="left-box">
+                    {% load static %}
+                    <img src="{% static 'Pictures/what-we-do.svg' %}" alt="Woman">
+                </div>
+                <div class="right-box">
+                    <h3>WHAT WE DO</h3>
+                    <p>
+                        We help to make data compliance and data security for businesses in Nigeria user-friendly. We
+                        provide solution for legal policies. We create customized Privacy Policies, Terms and
+                        condition, Terms of Use to keep your business safe from legal issues.
+                    </p>
+                </div>
+            </div>
+            <div class="box box3">
+                <div class="left-box">
+                    {% load static %}
+                    <img src="{% static 'Pictures/how-image.svg' %}" alt="Man">
+                </div>
+                <div class="right-box">
+                    <h3>HOW WE DO IT</h3>
+                    <p>
+                        We do not give pre-made policies. Every policy are custom made using the details you will
+                        provide for us. This makes your T & C personalized for you to protect your business.
+                    </p>
+                </div>
+            </div>
+            <div class="box box4">
+                <div id="trusted">
+                    <h2>Trusted by Thousands</h2>
+                </div>
+                <div id="figures">
+                    <div id="fig1">
+                        {% load static %}
+                        <img src="{% static 'Pictures/user-count.png' %}" alt="User Count">
+                        <p>Users</p>
+                    </div>
+                    <div id="fig2">
+                        {% load static %}
+                        <img src="{% static 'Pictures/policy-count.png' %}" alt="Policy Count">
+                        <p>Policies generated per day</p>
+                    </div>
+                    <div id="fig2">
+                        {% load static %}
+                        <img src="{% static 'Pictures/terms-count.png' %}" alt="Terms Count">
+                        <p>Terms generated per month</p>
+                    </div>
+                </div>
+                <div id="generate">
+                    <a href="sign_up.html">Generate Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="one">
+            <img src="{% static 'Logo/logo-blue-yellow.png' %}" alt="" id>
+        </div>
+        <div id="two">
+            <a href="about-us.html">About us</a>
+            <a href="policy.html">Our Privacy Policy</a>
+            <a href=""> Our Terms of use</a>
+        </div>
+        <div id="three">
+            <a href="privacypolicy.html">Privacy Policy Generator</a>
+            <a href="">Terms & Conditions Generator</a>
+            <a href="security&faqs.html">FAQs</a>
+        </div>
+        <div id="four">
+            <a href="">Help & Support</a>
+            <a href="contact.html">Contact us</a>
+            <a href="">Resources</a>
+            <a href="security&faqs.html">Security FAQ</a>
+        </div>
+    </footer>
+    <script src="{% static 'about-us.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sec&faqs.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'sec&faqs.css' %}">
+    <title>Security & FAQS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bar">
+            <div class="logo">
+
+                <img src="{% static 'Logo/LogoTERmS.png' %}" alt="">
+            </div>
+            <div class="image">
+                <img src="" alt="" srcset="">
+                <p>
+                    Website
+                </p>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a>Access Control</a>
+                    </li>
+                    <li>
+                        <a>Transmission Management</a>
+                    </li>
+                    <li>
+                        <a>Input Control</a>
+                    </li>
+                    <li>
+                        <a>Compliance and Certification</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            <div class="header">
+                <div class="tab">
+                    <h1>
+                        TermsCreator Security FAQS  
+                    </h1>
+                    <img src="{% static 'Pictures/securityFAQ.png' %}" alt="">
+                    </div>
+                    <p class="box1">
+                        Termscreator is dedicated to meeting our customers data protection and data security needs.
+                        This page presents our users with a summary of our practices and policies, which helps us keep your personal information safe and secure.
+                    </p>
+                </div>
+                <h2 class="box2">
+                    ACCESS CONTROL
+                </h2>
+                <p class="box3">
+                    Preventing Unauthorized Product Access
+                </p>
+            </div>
+            <div id="left">
+                <p class="pic">
+                    Authentication
+                </p>
+                <p class="pic-p">
+                    For our customers products, we have adopted a standard password policy:
+                    <ol class="ol1">
+                        <li>
+                         Minimum 8 symbols in length.Password must have at least one digit, one lowercase letter, and one uppercase letter.
+                        </li>
+                        <li>
+                         Before accessing non-public cliennt data, users using the user interface for Termscreator services must first login.
+                        </li>
+     
+                     </ol>
+                </p>
+                <p class="pic">
+                    Seperation of environments
+                </p>
+                <p class="pic-p">
+                    To reduce the dangers of unauthorized access or changes to the operational environment, we divide the development, testing, and operational environments.
+                </p>
+                <p class="pic">
+                    Preventing Unauthorized Access to Infrastructure
+                </p>
+                <p class="pic">
+                    Physical and environmental security
+                    <p class="pic-p">
+                        Multi-tenant, external infrastructure providers host the infrastructure for our products. Their environmental and physical 
+                        security controls are assessed for conformity with a wide range of standards.
+                    </p>
+                </p>
+                <p class="pic">
+                    Network Protection
+                    <p class="pic-p">
+                        In order to stop network traffic utilizing unapproved protocols from reaching the product infrastructure, 
+                        network access control measures are used. The technical safeguards that have been adopted vary amongst infrastructure providers 
+                        and include typical firewall rules, security group assignment, and Virtual Private Cloud (VPC) implementations. To safeguard programs that can be accesses through the internet,
+                        we have put in place a Web Application Firewall (WAF) solution. The WAF is made to recognize and stop assaults on netwok services that are accessible to the general public. 
+                    </p>
+                </p>
+            </div>
+            <div id="right">
+                <p class="pic">
+                    Authorization
+                    <p class="pic-p">
+                        We use safe storage solutions to keep consumer data. The infrastructure support the underllying applications is inaccessible to users. 
+                        Role-based access to sensitive information is only permitted for specified purposes ( on a “need to know” basis)
+                    </p>
+                </p>
+                <p class="pic">
+                    Employee access
+                    <p class="pic-p">
+                        Through regulated interfaces, a small number of our skilled personnel get access to consumer data. Employee access is made possible in order to improve customer service, 
+                        identify and address security incidents, troubleshoot potential issues, and promote data security.
+                    </p>
+                    <p class="pic-p">
+                        Access is granted to employees based on their function, and all access requests are recorded. the infratsrtucture is only accessible to a selected group of employees. 
+                        Databases belonging to clients are not physically accessible to Termscreator staff. All new hires are required to complete privacy and security training as part of the onboarding process 
+                        and as a condition of staying on the job.                        
+                    </p>
+                </p>
+                <input type="submit" name="submit" id="submit" value="Start a Free Trial Now">
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </footer>

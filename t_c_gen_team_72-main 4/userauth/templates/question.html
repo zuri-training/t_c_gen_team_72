@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <form method="POST">
+        {% csrf_token %}
+
+        {% for object in object_list%}
+            {{ object.question }}
+            <input type="text" name="answer" id=""  required class="field">
+            <button type="submit">Log in</button><br>
+         {% endfor %}
+     </form>
+</body>
+</html>
