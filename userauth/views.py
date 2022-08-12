@@ -48,7 +48,7 @@ def policyTest(request):
     return render(request, "policy.html")
 
 class home(TemplateView):
-    template_name = "landingPage.html"
+    template_name = "index.html"
 
 @login_required
 def reset_password_view(request, pk):
@@ -63,8 +63,8 @@ def reset_password_view(request, pk):
     return render(request, 'reset_password.html', {'form': form})
 
 #Login authenticatin and request
-""""
-def login(request):
+
+def new_login(request):
     if request.method == 'POST':
 
         error = 0
@@ -96,17 +96,17 @@ def login(request):
             if user is not None:
                 auth.login(request, user)
                 messages.success(request, "You are successfully logged in")
-                return redirect('home')
+                return redirect('me')
             else:
                messages.error(request, 'Invalid Username or Password')
-
+               return render(request, 'loginform.html')
     else:
         if request.user.is_authenticated:
             redirect("Home")
         else:
             return render(request, 'loginform.html')
 
-"""
+
 
 #Login authenticatin and request
 def signup(request):
@@ -262,7 +262,7 @@ def reset_password_view(request, pk):
             pass
     return render(request, 'reset_password.html', {'form': form})
 
-
+""""
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -282,7 +282,7 @@ def login(request):
     else:
         return render(request, 'loginform.html')
 
-
+"""
 
 
 
@@ -301,12 +301,12 @@ def signup(request):
 #############################################
 class TermsPoliciesView(ListView):  # list the texts inserted into the database into the html file created here
     model = PrivacyPolicyQuestions
-    template_name = 't-c-preview.html'
+    template_name = 'generate.html'
 
     def terms_policies(self, request):
         new_user = t_c_Db.objects.all().values()
         args = {'new_user': new_user}
-        return render(request, 't-c-preview.html', args)
+        return render(request, 'generate.html', args)
 
 
 class NewCreateView(CreateView):  # Creates the view to insert text to database
@@ -424,7 +424,7 @@ def question1(request):
         elif construction == "Real estate":
             user = PrivacyPolicyQuestions(real_estate="True")
             user.save()
-        return render(request, 't-c-preview.html', {'user': user})
+        return render(request, 'gene.html', {'user': user})
 
     else:
         pass
@@ -457,7 +457,8 @@ def login(request):
             return redirect('/list')
         else:
             messages.info(request, 'Invalid Username or Password')
-            return redirect('/signup')
+            return redirect('loginform')
+
 
 
 
@@ -489,5 +490,44 @@ def question(request):
 
 
 def question2(request):
-    return render(request, '1collection.html')
+    return render(request, 'user_info.html')
 
+
+def question3(request):
+    if request.method == "POST":
+        construction = request.POST["browser"]
+        if construction == "Construction":
+            user = PrivacyPolicyQuestions(construction="True")
+            #            user.save(update_fields=["construction"])
+            user.save()
+        elif construction == "Finance":
+            user = PrivacyPolicyQuestions(finance="True")
+            user.save()
+        elif construction == "Employment":
+            user = PrivacyPolicyQuestions(employment="True")
+            user.save()
+        elif construction == "Freelancer":
+            user = PrivacyPolicyQuestions(freelancer="True")
+            user.save()
+        elif construction == "SAAS":
+            user = PrivacyPolicyQuestions(saas="True")
+            user.save()
+        elif construction == "Health Care":
+            user = PrivacyPolicyQuestions(health_care="True")
+            user.save()
+        elif construction == "Real estate":
+            user = PrivacyPolicyQuestions(real_estate="True")
+            user.save()
+        return render(request, 'collection-two.html', {'user': user})
+
+    else:
+        pass
+    return render(request, 'one-collection.html')
+
+
+def question4(request):
+    return render(request, 'collection-two.html')
+
+
+def generate(request):
+    return render(request, 'generate.html')

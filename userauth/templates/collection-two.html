@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
+    {% load static %}
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="disclosure.css">
+    <link rel="stylesheet" href="{% static 'collection-two.css' %}">
     <title>Privacy Policy</title>
 </head>
 
@@ -14,10 +17,10 @@
         <nav id="navbar">
             <!-- This div contains the white logo -->
             <div id="logo-div">
-                <img src="logo-white-yellow.png" alt="TermsCreator Logo" id="logo">
+                <img src="{% static 'Logo/logo-white-yellow.png' %}" alt="TermsCreator Logo" id="logo">
             </div>
             <div id="user-profile">
-                <span><img src="policy_header.svg" alt="User Icon"></span>
+                <span><img src="{% static 'icons/policy_header.svg' %}" alt="User Icon"></span>
                 <span>Privacy Policy Uses</span>
             </div>
             <div id="lower-div">
@@ -64,7 +67,7 @@
             <div class="inner">
 
                 <h3>Privacy Policy</h3>
-                <p>Use Of Information</p>
+                <p>Collection Of Information</p>
             </div>
             <div class="inner1">
                 <button>Export </button>
@@ -135,48 +138,10 @@
  -->
 
                     <div>
-                        <p class="Q1">Does your website/app accept payments<br> online?</p>
-
+                        <p class="Q1">Are you collecting personal information<br>about your users from other sources?</p>
                     </div>
                     <div>
-                        <input type="radio" id="" name="option1" value="">
-                        <label for="option1">Yes</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="" name="option2" value="">
-                        <label for="option2">No</label>
-
-
-
-
-
-                    </div>
-
-                    <div>
-                        <p class="Q1">Does your website or app contain<br>advertisements from third parties that are <br>not affiliated with you?</p>
-
-                    </div>
-                    <div>
-                        <input type="radio" id="" name="option1" value="">
-                        <label for="option1">Yes</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="" name="option2" value="">
-                        <label for="option2">No</label>
-
-
-
-
-
-                    </div>
-
-                    <div>
-                        <p class="Q1">Can users upload or post content on your website?</p>
-                        <p class="text">This includes comments, articles, photos, audio,<br> video, user profile images etc.</p>
-
-                    </div>
-                    <div>
-                        <input type="radio" id="" name="option1" value="">
+                        <input type="radio" id="" name="option1" value="" required>
                         <label for="option1">Yes</label>
                     </div>
                     <div>
@@ -195,7 +160,7 @@
 
 
             <div class="second">
-                <img src="t_and_c.png" alt="">
+                <img src="{% static 'Pictures/t_and_c.png' %}" alt="">
                 <button>Preview</button>
 
 
@@ -212,16 +177,22 @@
 
         <div>
             <div class="for-btn">
-                <button class="prev">
-                    Previous
-                </button>
-                <button class="potter">
-                    Save & Next
-                </button>
+                <a href="collection.html">
+                    <button class="prev">
+                        Previous
+                    </button>
+                </a>
+                <a href="{% url 'export'%}">
+                    <button class="potter">
+                        Export
+                    </button>
+
+                </a>
+                
             </div>
 
 
-             <p class="tips">Tips:</p>
+            <p class="tips">Tips:</p>
             <div class="time">
                 
                 <div >
@@ -240,13 +211,13 @@
                     </ul>
                 </div>
 
-                <!-- <div >
+                <div >
                     <p>What does "collect" mean?</p>
                     <p>Collecting information means you<br> gather details about your users<br> either directly (e.g.,
                         via email,<br> website form, sign-up page, survey) or from other sources<br>(e.g., pubicly
                         available information, data scraping, <br> marketing lists, analytics <br> software)</p>
-                </div> -->
-            </div> 
+                </div>
+            </div>
 
 
             <footer class="hermes">

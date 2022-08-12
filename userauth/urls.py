@@ -37,7 +37,7 @@ path("", views.home.as_view(), name="Home"),
     path('<pk>/reset_password', views.reset_password_view, name='reset_password'),
 
     path('login/', views.login, name='loginform'),
-    path('signup/', views.signup),
+    path('signup/', views.signup, name='signup'),
 
     path('me/', TermsPoliciesView.as_view(), args),
     path('details/', LoggedUser.as_view()),
@@ -58,7 +58,10 @@ path("", views.home.as_view(), name="Home"),
 
     path("policy", views.policyTest, name="policy"),
     path("contact-us", views.contact_us),
-    path("question/1", views.question),
-    path("question/2", views.question2),
+    path("question/1", views.question, name="first_question"),
+    path("question/2", views.question2, name="second_question"),
+    path("question/3", views.question3, name="third_question"),
+    path("question/4", views.question4, name="fourth_question"),
+    path("terms and condition/export", TermsPoliciesView.as_view(), name="export"),
 ]
 

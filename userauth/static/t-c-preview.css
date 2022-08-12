@@ -13,6 +13,7 @@ body{
     position: fixed;
     z-index: 1;
 }
+
 #logo-div{
     width: 100%;
     height: 178px;
@@ -376,6 +377,10 @@ body{
     line-height: 19px;
     letter-spacing: 1.25px;
     color: #FFFFFF;
+}
+#export a{
+text-decoration: none;
+color: #ffffff;
 }
 #text-page{
     width: 750px;
