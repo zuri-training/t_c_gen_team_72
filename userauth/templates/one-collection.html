@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
+    {% load static %}
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="collection.css">
+    <link rel="stylesheet" href="{% static 'collection.css' %}">
     <title>Privacy Policy</title>
 </head>
 
@@ -14,10 +17,10 @@
         <nav id="navbar">
             <!-- This div contains the white logo -->
             <div id="logo-div">
-                <img src="logo-white-yellow.png" alt="TermsCreator Logo" id="logo">
+                <img src="{% static 'Logo/logo-white-yellow.png' %}" alt="TermsCreator Logo" id="logo">
             </div>
             <div id="user-profile">
-                <span><img src="policy_header.svg" alt="User Icon"></span>
+                <span><img src="{% static 'icons/policy_header.svg' %}" alt="User Icon"></span>
                 <span>Privacy Policy Uses</span>
             </div>
             <div id="lower-div">
@@ -70,18 +73,19 @@
                 <button>Export </button>
             </div>
         </div>
-
+         <form method="POST">
+             {% csrf_token %}
         <div class="hatt">
             <div class="content">
                 <div >
                     <p class="Q1"> Your Industry Belongs to Which Category <br> </p>
-                    <form method="POST">
-                        {% csrf_token %}
-                        <select name="browser"
+
+                        <select name="browser" required
           onchange="if(this.options[this.selectedIndex].value=='customOption'){
               toggleField(this,this.nextSibling);
               this.selectedIndex='0';
           }" >
+            <option></option>
             <option>Construction</option>
             <option>Finance</option>
             <option>Freelancer</option>
@@ -93,8 +97,7 @@
         </select><input name="browser" style="display:none;" disabled="disabled"
             onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
 
-
-                      <button type="submit" href="/me"> Log in </button> <br>
+<!--                        <button type="submit" > Log in </button> <br> -->
 
                 <p class="Q1"> Your Industry Belongs to Which Category <br> </p>
                         <div class="one">
@@ -124,7 +127,7 @@
 
 
 
-                    </form>
+
                     <p>Add your own</p>
 
                     <div class="thing">
@@ -157,8 +160,8 @@
             </div>
 
 
-            <div class="second">
-                <img src="t_and_c.png" alt="">
+             <div class="second">
+                <img src="{% static 'Pictures/t_and_c.png' %}" alt="">
                 <button>Preview</button>
 
 
@@ -175,20 +178,27 @@
 
         <div>
             <div class="for-btn">
-                <button class="prev">
-                    Previous
-                </button>
-                <button class="potter">
-                    Save & Next
-                </button>
+                <a href="userInfo.html">
+                    <button class="prev">
+                        Previous
+                    </button>
+                </a>
+
+                <a href="{% url 'fourth_question'%}">
+                    <button type="submit" class="potter">
+                        Save & Next
+                    </button>
+                </a>
+
+
             </div>
         </form>
 
             <p class="tips">Tips:</p>
             <div class="time">
-                
+
                 <div >
-                    
+
                     <p>What is personal Information?</p>
                     <p> Personal information is information that is linked or reasonably linked,<br> directly or
                         indirectly, to an identified or identifiable natural person. <br> Personal information can
@@ -221,7 +231,7 @@
                 </ul>
             </footer>
         </div>
-    </div>
+
 </body>
 
 </html>
