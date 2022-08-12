@@ -1,0 +1,7 @@
+Reset password page:
+HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/reset_password.html
+CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/reset_password.css
+ 
+New password page:
+HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/new_password.html
+CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/new_password.css
