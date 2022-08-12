@@ -155,6 +155,13 @@
         </nav>
     </div>
     <!-- This div is for the mainpage content -->
+
+
+            {% load static %}
+
+            {% for object in object_list %}
+
+            {% if object.construction is True %}
     <div id="main-page">
         <button type="submit" id="search-button">
             {% load static %}
@@ -168,7 +175,7 @@
     </ul>
         <div id="policies-line">
             <div id="left">
-                <p> 
+                <p>
                     {% load static %}
                     <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
                     <span>Policies</span>
@@ -180,16 +187,10 @@
                 <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
                 {% load static %}
                 <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
-                <button id="export">Export</button>
+                <a href="{% static 'terms/construction terms and policy.pdf' %}" download><button type="submit" id="export">Export</button></a>
             </div>
         </div>
 
-
-            {% load static %}
-
-            {% for object in object_list %}
-
-            {% if object.construction is True %}
             <div style="border-style: solid; width: 80%; overflow: scroll; height: 900px; margin-top: 400px;" >
                 <p>STANDARD TERMS AND CONDITIONS FOR CONSTRUCTION SERVICES</p>
 
@@ -293,8 +294,37 @@
                     </p>
 
                 </div>
-                <a ="" href="{% static 'terms/construction terms and policy.pdf'%}" download><button class="export">Download File</button></a>
-        {% elif object.finance is True %}
+         </div>
+
+    {% elif object.finance is True %}
+    <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/FinancialTerms and Conditions.pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
         <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -378,7 +408,36 @@
             </p>
                 <a href="{% static 'terms/FinancialTerms and Conditions.pdf'%}" download><button class="export">Download File</button></a>
             </div>
+        </div>
             {% elif object.employment is True %}
+              <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/Samples of Employment Terms and Conditions.pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
         <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -486,7 +545,36 @@
                 e termination of services already in progress.
             </p>
             </div>
+            </div>
             {% elif object.freelancer is True %}
+                   <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/pdf-template-freelance-contract-template.pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
         <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -566,7 +654,36 @@
 
                 </p>
             </div>
-             {% elif object.health_care is True %}
+        </div>
+            {% elif object.health_care is True %}
+                               <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/Health Care t_c .pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
             <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -638,13 +755,37 @@
 
                 </p>
             </div>
-                {% elif object.saas is True %}
-            <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
-            <div>Terms and Conditions
-                <p>
-                  </p>
             </div>
-            {% elif object.saas is True %}
+
+            {% elif object.real_estate is True %}
+                       <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/Samples of Employment Terms and Conditions.pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
             <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -691,7 +832,36 @@
 
                   </p>
             </div>
+           </div>
              {% elif object.saas is True %}
+                                   <div id="main-page">
+        <button type="submit" id="search-button">
+            {% load static %}
+            <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
+        </button>
+        <h1 id="t-c">Terms & Conditions <span id="preview">/Preview</span></h1>
+
+        <ul>
+
+        </ol>
+    </ul>
+        <div id="policies-line">
+            <div id="left">
+                <p>
+                    {% load static %}
+                    <span><img src="{% static '/icons/clipboard-tick.png' %}" alt="Profile Icon"></span>
+                    <span>Policies</span>
+                </p>
+                <p>Legal policies help you comply with data privacy and consumer protection laws, protect your business and limit your liability.</p>
+            </div>
+            <div id="right">
+                {% load static %}
+                <button type="Edit" id="edit"><img src="{% static '/icons/brush-2.svg' %}" alt="Edit Brush">Edit</button>
+                {% load static %}
+                <button id="delete"><img src="{% static '/icons/trash.svg' %}" alt="Trash Can">Delete</button>
+                <a href="{% static 'terms/free-saas agreement.pdf' %}" download><button type="submit" id="export">Export</button></a>
+            </div>
+        </div>
             <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px" >
             <div>Terms and Conditions
                 <p>
@@ -1515,6 +1685,7 @@
 
                   </p>
             </div>
+             </div>
             {% endif %}
         {% empty %}
             <li>its empty</li>
@@ -1529,6 +1700,8 @@
     {% load static %}
     <script src="t-c-preview.js"></script>
     </div>
+  </div>
+
 </body>
 </html>
 
