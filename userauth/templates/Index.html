@@ -8,49 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/input.css' %}" />
     <title>Terms Creator Landing Page</title>
   </head>
   <body>
     <nav
-      class="relative w-full mx-auto h-full items-center sm:p-16 md:p-3 my-auto bg-[#154ED5] text-[#fff]"
+      class="relative w-full mx-auto h-full items-center p-8 md:p-3 my-auto bg-[#154ED5] text-[#fff]"
     >
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between md:ml-10">
         <div class=" ">
-          <img src="{ % static 'Logo_White.png' % }" alt="logo image" width="250px" />
+          <img src="{% static 'Logo/Logo_White.png' %}" alt="logo image" width="250px" />
         </div>
         <!-- menu items -->
-        <div class="hidden md:flex space-x-6   ">
+        <!-- <div class="hidden md:flex space-x-6   ">
           <a href="#">Products</a>
           <a href="#">Resources</a>
           <a href="#">Pricing</a>
-        </div>
-
-        <div class="hidden md:flex space-x-11 ml-48 my-auto">
-          <a href="#">Contact Us</a>
-          <a href="/login">Log in</a>
-        </div>
-        <!-- button -->
-        <a
-          href=""
-          class="hidden md:block p-3 px-6 pt-2 ml-11 baseline bg-[#fff] text-[#154ED5] rounded-md"
-
-        <div class="hidden md:flex space-x-11 ml-48 my-auto">
-          <a href="#">Contact Us</a>
-          <a href="#">Log in</a>
-        </div>
-        <!-- button -->
-        <a
-          href=""
-          class="hidden md:block p-3 px-6 pt-2 ml-11 baseline bg-[#fff] text-[#154ED5] rounded-md"
-
+        </div> -->
         <div class="hidden md:flex space-x-11 items-center ">
+          <a href="#">Products</a>
+          <a href="#">Resources</a>
           <a href="contactus.html">Contact Us</a>
           <a href="loginform.html">Log in</a>
           <a
           href="Sign_up.html"
           class="hidden md:block p-3 px-6 pt-2 ml-11 baseline bg-[#fff] md:m-4 text-[#154ED5] rounded-md"
-
-          >Start Free Trial</a
+          >Get Started</a
         >
         </div>
         <!-- button -->
@@ -64,49 +47,41 @@
       <div
         class="container relative text-left sector flex z-10 flex-col md:flex-row items-center px-6 mx-auto space-y-0 md:space-y-0"
       >
-        <!-- left item  -->
+      
         <div class="flex flex-col mt-20 md:w-1/2">
-          <h1 class="max-w-md text-5xl font-bold md:text-5xl text-left">
+          <h1 class="max-w-md text-3xl font-bold md:text-4xl text-left">
             <span class="text-[#154ED5] leading-snug"
               >Quickly Generate<br /></span
             ><span class="text-[#0D2F80] leading-snug"
               >personalised<br />Terms & Conditions</span
             >
           </h1>
-          <p class="max-w-sm sm:text-3xl mt-10 text-[#2D2D2D] text-left">
+          <p class="max-w-sm text-3xl mt-10 text-[#2D2D2D] text-left">
             and up to date <span class="font-bold">Privacy Policy</span>
           </p>
           <p
-            class="max-w-sm sm:text-3xl mt-10 text-[#154ED5] text-left md:text-2xl md:max-w-xl"
+            class="max-w-sm text-2xl mt-10 text-[#154ED5] text-left md:text-2xl md:max-w-xl"
           >
             Need a meaty, jargon-free and comprehensive terms of service<br />template?
             Our free terms and conditions generator is your one-stop solution to
             better protecting your blog, app, website or business
           </p>
           <a
-
-            href="/signup"
-            class="mt-10 max-w-sm p-2 mb-2 text-center px-2 pt-2 baseline bg-[#154ED5] text-[#fff] rounded-md md:text-center md:w-52 md:mb-20 md:py-2 md:px-1"
-
-            href=""
-            class="mt-10 max-w-sm p-2 mb-2 text-center px-2 pt-2 baseline bg-[#154ED5] text-[#fff] rounded-md md:text-center md:w-52 md:mb-20 md:py-2 md:px-1"
-
             href="Sign_up.html"
-            class="mt-10 max-w-sm sm:p-6 sm:mb-9 text-center sm:text-3xl px-2 pt-2 baseline bg-[#154ED5] text-[#fff] rounded-md md:text-center md:w-52 md:mb-20 md:py-2 md:px-1"
-
+            class="mt-10 max-w-sm p-6 mb-9 text-center text-3xl px-2 pt-2 baseline bg-[#154ED5] text-[#fff] rounded-md md:text-center md:w-96 md:mb-20 md:py-2 md:px-1"
             >Get Started</a
           >
         </div>
         <!-- image -->
         <div class="md:ml-22 w-96 relative">
           <img
-            src="{ % static 'Pictures/Hero  section image.png' %}"
+            src="{% static 'Pictures/Hero section image.png' %}"
             alt="image of a guy writing"
           />
         </div>
       </div>
       <div class="absolute md:h-full bottom-[-4rem] md:rotate-0 md:bottom-0  md:right-0 rotate-90 h-[100vw] right-[4rem] md:top-0 ">
-        <img class="h-full" src="{ % static 'pictures/hero section blue.png' % }" alt="" />
+        <img class="h-full" src="{% static 'Pictures/hero section blue.png' %}" alt="" />
       </div>
     </section>
 
@@ -125,7 +100,7 @@
         </h2>
         <!-- cards  -->
         <div
-          class="flex flex-col text-center mt-2 sm:mx-auto md:ml-20 mb-10 md:flex-row md:space-x-6"
+          class="flex flex-col text-center mt-2 sm:mx-auto md:ml-7 mb-10 md:flex-row md:space-x-6"
         >
           <!-- card 1 -->
 
@@ -133,7 +108,7 @@
             <a href="Sign_up.html">
               <img
                 class="w-32 ml-20 p-5"
-                src="{ % static 'icons/Handshake icon.png' % }"
+                src="{% static 'icons/handshake_icon.png' %}"
                 alt=""
               />
             </a>
@@ -151,7 +126,7 @@
               </p>
               <a
                 href="Sign_up.html"
-                class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mt-4"
               >
                 Generate Terms & Conditions
               </a>
@@ -163,7 +138,7 @@
             <a href="Sign_up.html">
               <img
                 class="w-32 ml-20 p-5"
-                src="{ % static 'icons/Check shield icon.png' % }"
+                src="{% static 'icons/check_shield_icon.png' %}"
                 alt=""
               />
             </a>
@@ -191,7 +166,7 @@
           <!-- card 3 -->
           <div class="max-w-sm bg-white rounded-lg mb-7 p-12">
             <a href="Sign_up.html">
-              <img class="w-32 ml-20 p-5" src="{% static 'icons/Check icon.png' %}" alt="" />
+              <img class="w-32 ml-20 p-5" src="{% static 'icons/check_icon.png' %}" alt="" />
             </a>
             <div class="p-5">
               <a href="Sign_up.html">
@@ -207,7 +182,7 @@
               </p>
               <a
                 href="Sign_up.html"
-                class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mt-4"
               >
                 Generate Terms Of Use
               </a>
@@ -221,7 +196,7 @@
     <section id="appfeature">
       <div class="flex flex-col max-w-full px-5 pt-9 mx-auto text-center">
         <h2
-          class="text-4xl font-bold text-center text-[#0D2F80] md:text-center md:mb-4"
+          class="text-3xl font-bold text-center md:text-4xl text-[#0D2F80] md:text-center md:mb-4"
         >
           Why Use Terms Creator?
         </h2>
@@ -236,7 +211,7 @@
             <div class="flex flex-row text-left md:my-5 md:mb-12 md:ml-8">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/simple-calendar-svgrepo-com 1.png' % }"
+                src="{% static 'icons/simple-calendar-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">
@@ -246,7 +221,7 @@
             <div class="flex flex-row sm:mt-5 md:mb-16">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/event-date-and-time-symbol-svgrepo-com 1.png' % }"
+                src="{% static 'icons/event-date-and-time-symbol-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">Always up-to-date</p>
@@ -260,7 +235,7 @@
             <div class="flex flex-row text-left md:my-5 md:mb-12 md:ml-8">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/cost-effective-productive-svgrepo-com 1.png' % }"
+                src="{% static 'icons/cost-effective-productive-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">
@@ -271,7 +246,7 @@
             <div class="flex flex-row sm:mt-5 md:mb-16">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/time-svgrepo-com 1.png' % }"
+                src="{% static 'icons/time-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">Takes less time</p>
@@ -285,7 +260,7 @@
             <div class="flex flex-row text-left md:my-5 md:mb-12 md:ml-8">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/download-svgrepo-com 1.png' % }"
+                src="{% static 'icons/download-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">Download in<br />any format</p>
@@ -293,7 +268,7 @@
             <div class="flex flex-row sm:mt-5 md:mb-16">
               <img
                 class="w-20 mr-3"
-                src="{ % static 'icons/insert-template-svgrepo-com 1.png' % }"
+                src="{% static 'icons/insert-template-svgrepo-com 1.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-2xl">Customizable<br />Templates</p>
@@ -307,7 +282,7 @@
     <section>
       <div class="flex flex-col max-w-full px-5 pt-9 mx-auto text-center">
         <h2
-          class="text-4xl font-bold text-center text-[#0D2F80] md:text-center md:mb-4"
+          class="text-3xl font-bold text-center text-[#0D2F80] md:text-4xl md:text-center md:mb-4"
         >
           Trusted by Thousands
         </h2>
@@ -324,7 +299,7 @@
             >
               <img
                 class="w-16 ml-16"
-                src="{ % static 'Pictures/User count number.png' % }"
+                src="{% static 'Pictures/User count number.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-3xl md:text-2xl text-left ml-12">
@@ -342,7 +317,7 @@
             >
               <img
                 class="w-16 ml-16"
-                src="{ % static 'Pictures/Policy count 2.png' % }"
+                src="{% static 'Pictures/Policy count 2.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-3xl md:text-2xl text-left">
@@ -360,7 +335,7 @@
             >
               <img
                 class="w-16 ml-16"
-                src="{ % static 'Pictures/T_C Month count.png' % }"
+                src="{% static 'Pictures/T_C Month count.png' %}"
                 alt=""
               />
               <p class="text-[#000] text-3xl md:text-2xl text-left">
@@ -420,7 +395,7 @@
           <div class="">
             <div class="w-96 md:w-96 mt-10 md:mt-0 ">
               <img
-                src="{ % static 'Pictures/Hand writing.png' % }"
+                src="{% static 'Pictures/hand_writing.png' %}"
                 alt="image of a guy writing"
               />
             </div>
@@ -432,14 +407,15 @@
         Get your Terms & conditions and Privacy<br />
         Policy generated in few simple steps:
       </p>
-      <ul class="block md:hidden list-disc ">
+      <ul class="block md:hidden list-disc text-2xl ml-5 min-w-full  text-left ">
         <li class="mt-10 text-[#154ED5]">Answer questions about your business, website.</li>
-        <li class="mt-10 text-[#154ED5]">Answer questions about your business, website.</li>
-        <li class="mt-10 text-[#154ED5]">Answer questions about your business, website.</li>
+        <li class="mt-10 text-[#154ED5]">Choose your method of dispute resolution(a critical piece of
+          any terms and conditions)</li>
+        <li class="mt-10 text-[#154ED5]">Give a few final details and add customization if needed</li>
         
       </ul>
         <div
-        class=" hidden container mx-auto md:flex flex-col mt-6 md:flex-row md:mt-12  justify-between md:space-x-3  md:justify-between "
+        class=" hidden container mx-auto md:flex flex-col mt-6 md:flex-row md:mt-2 md:ml-36  justify-between md:space-x-3  md:justify-between "
       >
         <div class=" md:w-[30%]">
           <p
@@ -467,7 +443,7 @@
 
       <a
         href="#"
-        class="sm:text-4xl px-2 py-2 mt-5 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  md:w-96 md:mb-9"
+        class="sm:text-4xl px-2 py-2 mt-5 mb-5 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  md:w-96 md:mb-9"
       >
         Generate Now
       </a>
@@ -492,7 +468,7 @@
           <!-- card 1 -->
           <div class="max-w-sm bg-white rounded-lg mb-7 p-12">
             <a href="Sign_up.html">
-              <img class="w-48 ml-16 p-5" src="{ % static 'Pictures/User 1.png' % }" alt="" />
+              <img class="w-48 ml-16 p-5" src="{% static 'Pictures/User 1.png' %}" alt="" />
             </a>
             <div class="p-5">
               <h5 class="mb-2 text-2xl font-bold text-black">
@@ -512,7 +488,7 @@
           <!-- card 2 -->
           <div class="max-w-sm bg-white rounded-lg mb-7 p-12 md:-mt-14">
             <a href="#">
-              <img class="w-48 ml-16 p-5" src="{ % static 'Pictures/User 2.png' % }" alt="" />
+              <img class="w-48 ml-16 p-5" src="{% static 'Pictures/User 2.png' %}" alt="" />
             </a>
             <div class="p-5">
               <h5 class="mb-2 text-2xl font-bold text-black">Tech Mama</h5>
@@ -530,7 +506,7 @@
           <!-- card 3 -->
           <div class="max-w-sm bg-white rounded-lg mb-7 p-12">
             <a href="#">
-              <img class="w-48 ml-16 p-5" src="{ % static 'Pictures/User 3.png' % }" alt="" />
+              <img class="w-48 ml-16 p-5" src="{% static 'Pictures/User 3.png' %}" alt="" />
             </a>
             <div class="p-5">
               <h5 class="mb-2 text-2xl font-bold text-black">Sam Doe</h5>
@@ -554,7 +530,7 @@
         class="flex flex-col max-w-full px-5 pt-9 mx-auto text-center bg-[#051333]"
       >
         <h2
-          class="text-3xl font-bold text-center text-white md:text-[#c1cfef] md:text-center md:mb-4"
+          class="text-2xl  font-bold  text-center md:text-4xl   text-white md:text-[#c1cfef] md:text-center md:mb-4"
         >
           Provide your customers with legal <br />
           peace of mind and save time and money.
@@ -587,8 +563,8 @@
           <!-- Logo -->
           <div class="">
             <img
-              src="{ % static 'Logo/Logo Blue Yellow.png' % }"
-              class="h-8 min-w-min"
+              src="{% static 'Logo/Logo-Blue-Yellow.png' %}"
+              class="h-10 min-w-min"
               alt=""
             />
           </div>

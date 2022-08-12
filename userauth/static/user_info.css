@@ -27,10 +27,6 @@ body{
     left: 52px;
     top: 74px;
 }
-.main-ctn{
-    height: 100vh;
-    overflow-y: scroll;
-}
 #user-profile{
     width: 100%;
     height: 106px;
@@ -58,7 +54,8 @@ a span{
     top: -26px;
 }
 #lower-div{
-    height: 250vh;
+    width: 100%;
+    height: 200vh;
     background-color: #B2C9FF;
     display: flex;
     flex-direction: column;
@@ -125,6 +122,7 @@ a span{
     border: 2px solid #154ED4;
     background-color: #FFFFFF;
     border-radius:5px;
+    color: #154ED4;
 }
 .content{
     display:flex;
@@ -132,7 +130,6 @@ a span{
     background-color: #E7EEFF;
     width: 40%;
     height: max-content;
-    padding: 20px 0px;
 
 }
 .content p{
@@ -147,6 +144,7 @@ a span{
     font-family: sans-serif;
     align-items: center;
 }
+
 .Q1{
     color: #154ED4;
 }
@@ -163,30 +161,28 @@ input[type=text] {
   }
   .one{
     display: flex;
+    
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-bottom: 10px;
   }
   .one label{
     margin-left:10px;
+    flex-direction: column;
   }
   .thing{
     display: flex;
     margin-bottom: 15px;
-    align-items: center;
     
   }
   .thing input{
     width: 70%;
     margin-left: 10px;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
 
   }
-  
   .thing button{
     margin-left:15px;
-    height: 45px;
 
 
     width:25%;
@@ -200,7 +196,6 @@ input[type=text] {
     display: flex;
     flex-direction:column;
     border-radius: 5px;
-    height: max-content;
   }
   .second img{
     margin: 10px;
@@ -218,24 +213,14 @@ input[type=text] {
   .hatt{
     display: flex;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 20px;
 
   }
-  .prev{
-    padding: 10px 65px;
-    border: 2px solid #154ED4;
-    background-color: #FFFFFF;
-    color: #154ED4;
-    border-radius:5px;
-  }
-  .for-btn{
+  /* .potter{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 180px;
     margin-right: 30px;
-    margin-left: 30px;
-  }
+  } */
   .potter{
     background-color: #154ED4;
     color: #fff;
@@ -244,16 +229,43 @@ input[type=text] {
     border: 2px solid #154ED4;
     border-radius:5px;
   }
-  /* .ron{
-    margin-top: 250px;
-    margin-left: 70px;
-  } */
+  .previous button{
+    margin-left: 50px;
+  
+  }
+  .ctn-btm{
+    display:flex;
+    justify-content: space-between;
+   
+  }
+  .policy{
+    display: flex;
+  }
   .tips{
     font-weight: bolder;
     font-family: sans-serif;
-    margin-left: 60px;
+    margin-left: 75px;
     margin-top: 70px;
   }
+  .ron p{
+    font-family: sans-serif;
+  
+  }
+  .prev{
+    padding: 10px 65px;
+    border: 2px solid #154ED4;
+    background-color: #FFFFFF;
+    border-radius:5px;
+    color: #154ED4;
+  }
+  .for-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 180px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
   .time{
     display:flex;
     justify-content: space-around;
@@ -266,12 +278,8 @@ input[type=text] {
   .time li{
     font-family: sans-serif;
   }
-  .collect{
-    margin-top: 150px;
-  }
-   .ron p{
-    font-family: sans-serif;
-  } 
+
+
   .hermes ul{
     list-style: none;
     display: flex;
@@ -280,8 +288,11 @@ input[type=text] {
     color: #154ED4;
     font-family: sans-serif;
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 150px;
   }
   .hermes ul:hover{
     cursor: pointer;
   }
+  /* .first{
+    margin-left: 85px;
+  } */
