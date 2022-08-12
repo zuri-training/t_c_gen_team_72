@@ -19,23 +19,23 @@
             <div class="overlay-content">
               <a href="">Products</a>
               <a href="">Resources</a>
-              <a href="">Contact us</a>
-              <a href="">Login</a>
-              <a href="" id="bar-start">Get Started</a>
+              <a href="contact.html">Contact us</a>
+              <a href="loginform.html">Login</a>
+              <a href="sign_up.html" id="bar-start">Get Started</a>
             </div>
         </div>
     </div>
     <nav id="navbar">
         <div>
             {% load static %}
-            <img src="{% static 'Logo/Logo_White.png' %}" alt="Logo" id="Logo">
+            <img src="{% static 'Logo/logo_white.png' %}" alt="Logo" id="Logo">
         </div>
         <div class="nav-links">
             <a href="">Products</a>
             <a href="">Resources</a>
-            <a href="">Contact us</a>
-            <a href="">Login</a>
-            <a href="" id="start">Get Started</a>
+            <a href="contact.html">Contact us</a>
+            <a href="loginform.html">Login</a>
+            <a href="sign_up.html" id="start">Get Started</a>
             <p id="bar" onclick="openNav()">
                 {% load static %}
                 <img src="{% static 'icons/menu_burger.svg' %}" alt="Menu Burger">
@@ -51,7 +51,7 @@
             <div class="box box1">
                 <div class="left-box">
                     {% load static %}
-                    <img src="{% static 'Logo/Logo-Blue-Yellow.png' %}" alt="Logo">
+                    <img src="{% static 'Logo/logo-blue-yellow.png' %}" alt="Logo">
                 </div>
                 <div class="right-box">
                     <p>
@@ -115,32 +115,30 @@
                     </div>
                 </div>
                 <div id="generate">
-                    <a href="">Generate Now</a>
+                    <a href="sign_up.html">Generate Now</a>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div id="one">
-            <img src="{% static 'Logo/Logo-Blue-Yellow.png' %}" alt="" id>
+            <img src="{% static 'Logo/logo-blue-yellow.png' %}" alt="" id>
         </div>
         <div id="two">
-            <a href="">About us</a>
-            <a href="">Our Privacy Policy</a>
+            <a href="about-us.html">About us</a>
+            <a href="policy.html">Our Privacy Policy</a>
             <a href=""> Our Terms of use</a>
         </div>
         <div id="three">
-            <a href="">Privacy Policy Generator</a>
+            <a href="privacypolicy.html">Privacy Policy Generator</a>
             <a href="">Terms & Conditions Generator</a>
-            <a href="">Return & Refund Policy Generator</a>
-            <a href="">FAQs</a>
+            <a href="security&faqs.html">FAQs</a>
         </div>
         <div id="four">
             <a href="">Help & Support</a>
-            <a href="">Contact us</a>
-            <a href="">Pricing Plan</a>
+            <a href="contact.html">Contact us</a>
             <a href="">Resources</a>
-            <a href="">Security FAQ</a>
+            <a href="security&faqs.html">Security FAQ</a>
         </div>
     </footer>
     <script src="{% static 'about-us.js' %}"></script>

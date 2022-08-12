@@ -12,7 +12,7 @@
 <body>
     <div id="left">
         {% load static %}
-        <img src="{% static 'Logo/Logo White.png' %}" alt="White Logo" id="logo">
+        <img src="{% static 'Logo/logo_white.png' %}" alt="White Logo" id="logo">
         <p id="text">A few clicks away from you generating your professional policies.</p>
     </div>
     <div id="right">
@@ -73,13 +73,13 @@
                         </p>
                     </div>
                     <p id="checkbox">
-                        <input type="checkbox" required> I agree with the <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+                        <input type="checkbox" required> I agree with the <a href="">Terms & Conditions</a> and <a href="privacypolicy.html">Privacy Policy</a>
                     </p>
                 </fieldset>
                 <input type="submit" name="submit" id="submit" value="Create Account">
             </form>
         </div>
-        <p id="login">Already have an account? <a href=""> Log in</a></p>
+        <p id="login">Already have an account? <a href="loginform.html"> Log in</a></p>
     </div>
     {% load static %}
     <script src="{% static 'signup.js' %}"></script>
