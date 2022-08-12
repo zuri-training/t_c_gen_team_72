@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap");
-
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +17,9 @@
     flex: 2;
     display: flex;
     flex-direction: column;
+}
+.small{
+    display: none;
 }
 
 .main{
@@ -73,7 +75,6 @@
     letter-spacing: 0.25px;
 
     /* Primary Color/900 */
-
     color: #0D2F80;
     mix-blend-mode: normal;
 }
@@ -84,7 +85,7 @@
 
 .tab>p{
 
-    width: 160px;
+    width: 180px;
     height: 16px;
     align-self: flex-end;
 
@@ -122,6 +123,7 @@ form{
 
 input, select{
     align-items: center;
+    gap: 8px;
     color: #ACACAC;
     width: 328px;
     height: 46px;
@@ -130,10 +132,6 @@ input, select{
     padding: 16px;
     border-radius: 8px;
     border:1px solid #757575;
-}
-
-select{
-    padding: 16px;
 }
 
 p{
@@ -225,7 +223,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
 
 }
 
@@ -234,7 +231,7 @@ button{
 }
 
 .image>p{
-    width: 180px;
+    width: 130px;
     height: 28px;
 
 /* Desktop/Heading 5 */
@@ -322,3 +319,145 @@ a{
     width:100%;
     border:none;
 }
+
+
+@media screen and (max-width: 950px){
+    .container{
+        height: auto;
+    }
+    .tab{
+        width:100%;
+        margin:32px auto 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color:#FFFFFF;
+    }
+    .bar{
+        height: auto;
+        background-color: #B2C9FF;
+    }
+    .tab>p{
+        display: none;
+    }
+    .tab>img{
+        width:90px;
+        align-self: flex-end;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    .tab>h1{
+        align-self: flex-start;
+        background-color:#B2C9FF ;
+        width:100% ;
+        padding: 15px 0 15px 25px;
+        height: auto;
+    }
+
+    .logo, .image{
+        display: none;
+    }
+    .small{
+        display: block;
+        background-color: #B2C9FF;
+        text-align: center;
+    }
+    .small>img{
+        width: 25px;
+        margin-top: 95px;
+        padding-bottom: 5px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        padding-top:4px;
+       }
+
+    .edit{
+        margin-bottom: 0;
+    }
+
+    .password{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .footer{
+        margin-top:30px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    form{
+        width: 300px;
+        margin: auto;
+        padding-left: 10%;
+    }
+    .main{
+        margin-right: 0;
+    }
+
+    input, select{width: 250px;
+        margin: 0 auto 35px auto;
+
+    }
+
+    .phone>input[type="text"]{
+        margin: 0;
+        display: none;
+    }
+
+    .phone>input[type="tel"]{
+
+        width: 250px;
+        margin-bottom: 35px;
+    }
+
+
+    .but{
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .but2{
+        margin-bottom: 0;
+        width: 250px;
+    }
+    .but1{
+        border: 1px solid #154ED5;
+        background-color:#FFFFFF;
+        color: #154ED5;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    ul>li{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 20px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li:hover{
+        background-color: #FFFFFF;
+    }
+
+    li>img{
+        display: block;
+        margin-left: 4px;
+        margin-right: 5px;
+        height: 18px ;
+    }
+
+    a{
+        font-size: 12px;
+    }
+}
+
