@@ -93,7 +93,6 @@ The figma design that will be implemented for this project can be found [here](h
 Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
-<br />
 - We will then follow the instructions placed [here](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
 
 
