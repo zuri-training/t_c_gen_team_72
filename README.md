@@ -95,6 +95,20 @@ Forking and Creating A Pull Request(PR)
 ##Collaborators
 Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors).
 
+## Running The Project With A Windows System
+```
+-- Fork into project folder
+-- git clone the project to your local computer
+-- Open the project using VScode and carry out the following instructions:
+-- Create a virtual environment using "python -m venv [name of VE]"
+-- If you do not have a virtual environment, install one like this: pip install virtualenv_
+-- Activate your Virtual Environment using this command "[name of VE]\Scripts\activate
+-- Install django - pip install django
+<br>
+-- Run our Django Project: py manage.py runserver
+-- You get to view our entire work on our local server
+```
+
 
 
 
