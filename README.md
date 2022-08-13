@@ -4,7 +4,8 @@
 This is the **Terms Creator** cross platform app project repository handled by **Zuri-Training** and built by **Team 72** written with HTML5, CSS3/SCSS/Tailwind CSS, Bootstrap, Vanilla JavaScript and Python.
 <br />
 <br />
-This project uses the Django Framework and various 3rd party APIs.
+This project uses the Django Templating.<br />
+Our project name is termscreator, while our apps name is userauth.
 
 ## Project Description
 Terms Creator is a web application built to help individuals and businesses easily generate free policy documents that guide their websites, software applications and user information handling. 
@@ -77,15 +78,15 @@ User: Authenticated
 - User should be able to save data and continue at a later time.
 - Users should be able to view file history
 <br />
-<br/>
+
 ## Github Project For Issue Tracking
-Our github project for issue tracking for all designers and developers can be found in this [area](https://github.com/orgs/zuri-training/projects/468).
-<br />
-<br/>
+Our github project for issue tracking for all designers and developers can be found [here](https://github.com/orgs/zuri-training/projects/468)
+
+
 ## Design
 The figma design that will be implemented for this project can be found [here](https://www.figma.com/file/G2u5xC78DgSOoHznZhwQbA/Terms-Creator---Project-72-Team-Zuri-team-library?node-id=838%3A1849)
-<br/>
-<br/>
+
+
 ## Contribution Guide
 **Steps to collaborate on the repository for team members.**
 <br/>
@@ -93,11 +94,11 @@ Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
 <br />
-- We will then follow the instructions placed [here](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n).
-<br/>
-<br/>
-##Collaborators
-Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors).
+- We will then follow the instructions placed [here](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n)
+
+
+## Collaborators
+Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors)
 
 ## Running The Project With A Windows System
 ```
