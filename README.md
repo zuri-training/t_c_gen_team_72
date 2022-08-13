@@ -77,12 +77,15 @@ User: Authenticated
 - User should be able to save data and continue at a later time.
 - Users should be able to view file history
 <br />
+<br/>
 ## Github Project For Issue Tracking
 Our github project for issue tracking for all designers and developers can be found in this [area](https://github.com/orgs/zuri-training/projects/468).
 <br />
+<br/>
 ## Design
 The figma design that will be implemented for this project can be found [here](https://www.figma.com/file/G2u5xC78DgSOoHznZhwQbA/Terms-Creator---Project-72-Team-Zuri-team-library?node-id=838%3A1849)
-
+<br/>
+<br/>
 ## Contribution Guide
 **Steps to collaborate on the repository for team members.**
 <br/>
@@ -90,8 +93,9 @@ Forking and Creating A Pull Request(PR)
 - Fork the file
 - Git clone to local computer
 <br />
-- We will then follow the instructions placed [within](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n).
-
+- We will then follow the instructions placed [here](https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n).
+<br/>
+<br/>
 ##Collaborators
 Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors).
 
@@ -104,7 +108,6 @@ Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_ge
 -- If you do not have a virtual environment, install one like this: pip install virtualenv_
 -- Activate your Virtual Environment using this command "[name of VE]\Scripts\activate
 -- Install django - pip install django
-<br>
 -- Run our Django Project: py manage.py runserver
 -- You get to view our entire work on our local server
 ```
