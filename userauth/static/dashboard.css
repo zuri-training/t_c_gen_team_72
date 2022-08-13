@@ -20,6 +20,21 @@
     height: 40px;
   
   }
+  @media screen and (min-width: 361px) {
+    .openbtn{
+      display: none;
+      margin: auto;
+      cursor: pointer;
+    }
+
+
+  }
+  #toggle-nav {
+   display: none;
+   margin: auto;
+   cursor: pointer;
+  }
+
 
   .profile{
         background-color: #195EFF;
@@ -87,6 +102,12 @@
         padding-top: 19px;
         
       }
+      a p{
+        position: relative;
+        top: -15px;
+      }
+
+
 
       div a{
         text-decoration: none;
@@ -139,6 +160,17 @@
         font-weight: 400;
         font: Work Sans;
       }
+
+      .btn1{
+        width: 90px;
+        background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;    
+      }
+
+
       main{
         margin-left: 551px;
       }
@@ -286,3 +318,218 @@
 
   /* Mobile */
 
+  @media screen and (max-width: 360px) {
+
+#header{
+        height: 800px;
+        width: 70px;
+        top: 0;
+        left: 0;
+        background-color: #B2C9FF;
+        z-index: 1;
+        padding-top: 0px;
+        overflow: scroll;
+      }
+.logo{
+        display: none;
+      }
+  .logo-img{
+    display: none;
+  
+  }
+
+  .profile{
+        display: none;
+
+      }
+      .avatar{
+        
+        display: none;
+      }
+      .profile-pic{
+        
+        display: none;
+      }
+      #pic{
+        display: inherit;
+      }
+      .name{
+        display: none;
+      }
+
+      .openbtn{
+      display: block;
+    width: 25px;
+    height: 25px;
+    left: 50px;
+    margin-top: 50px;
+    }
+
+    .openbtn img{
+      width: 25px;
+      height: 25px;
+      position: fixed;
+      left: 25px;
+    }
+
+   /*   #toggle-nav {
+    display: block;
+    width: 16px;
+    height: 16px;
+    left: 35px;
+    margin-top: 75px;
+    } */
+
+.dashboard-items{
+        position: relative;
+        bottom: 10px;
+        height: 30px;
+        text-align: left;
+        padding-left: 30px;
+        margin-top: 8px;
+        padding-top: 5px;
+        
+      }
+.menu-text{
+  display: none;
+}
+
+ .logout{
+          position: relative;
+          height: 32x;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        top: 55px;
+        font-size: 16px;
+        line-height: 18.77;
+        font-weight: 400;
+        font: Work Sans;
+      }
+
+      main{
+        margin-left: 90px;
+      }
+.btn1{
+  width: 40px;
+height: 32px;
+left: 30px;
+bottom: 45px;
+background: #FFFFAA;
+box-shadow: 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+border-radius: 8px;
+}
+.selection{
+      display: block;
+      margin-bottom: 16px;
+      row-gap: 10px;
+      
+    }
+
+.box{
+      width: 216px;
+      height: 250px;
+      background: rgba(209, 223, 255, 0.5);
+      border-radius: 8px;
+      margin-top: 20px;
+
+    }
+
+    .greetings{
+      width: 216px;
+      height: 63px;
+      margin-bottom: 10.5px;
+      margin-top: 0px;
+    }
+h3{
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.15px;
+
+    }
+    .policy{
+      margin-top: 0px;
+    }
+    .tick{
+      display: flex;
+      margin-bottom: 0px;
+    }
+    #policy{
+      width: 15px;
+      height: 15px;
+      position: relative;
+      top: 20px;
+
+    }
+
+    #text{
+      margin-top: 0px;
+      padding-top: 0px;
+      font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+
+
+    }
+
+.add{
+      position: relative;
+      left: 40%;
+      right: 60%;
+      top: 40%;
+      bottom: 25%;
+
+    }
+
+    .terms{
+      width: 72px;
+    height: 12px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.140479px;
+    color: #154ED5;
+    position: relative;
+      top: 47%;
+      left: 35%;
+    }
+
+body{
+  height: 1094px;
+}
+
+.copyright{
+      width: 240px;
+      height: 30pxpx;
+      padding-left: 5px;
+    }
+    small{
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.2px;
+      color: #081F55;
+
+      }
+
+}

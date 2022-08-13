@@ -15,9 +15,12 @@
 			<div class="logo">
 				<div class="logo-img">
 					{% load static %}
-					<img src="{% static '/Logo/logo TERmS WY.png'%}" class="logo-img">
+					<img src="{% static '/Logo/logoTERmS.png'%}" class="logo-img">
 				</div>
 			</div>
+			
+			<span class="openbtn" onclick="navAction()"><img src="images/element-equal.png"></span> 
+
 			<div class="profile">
 				<div class="avatar">
 					<div class="profile-pic">
@@ -31,31 +34,31 @@
 			</div>
 			<div class="sidebar">
 				<div class="dashboard-items">
-				<a href="#about">{% load static %}<img src="{% static '/icons/policies.png' %}" class="icons">Dashboard</a>						
+				<a href="#about">{% load static %}<img src="{% static '/icons/policies.png' %}" class="icons"><span class="menu-text">Dashboard</span></a>						
 				
 				</div>
 
 				<div class="dashboard-items">
 					
-					<a href="#services">{% load static %}<img src="{% static '/icons/clipboard-tick.png' %}" class="icons">Policies</a>
+					<a href="#services">{% load static %}<img src="{% static '/icons/clipboard-tick.png' %}" class="icons"><span class="menu-text">Policies</span></a>
 				</div>
 
 				<div class="dashboard-items">
 					
-					<a href="#clients">{% load static %}<img src="{% static '/icons/user.svg' %}" class="icons">My Profile</a>
+					<a href="#clients">{% load static %}<img src="{% static '/icons/user.svg' %}" class="icons"><span class="menu-text">My Profile</span></a>
 				</div>
 				<div class="dashboard-items">
 					
-					<a href="#contact">{% load static %}<img src="{% static '/icons/document-download.svg' %}" class="icons">Downloads</a>
+					<a href="#contact">{% load static %}<img src="{% static '/icons/document-download.svg' %}" class="icons"><span class="menu-text">Downloads</span></a>
 				</div>
 				<div class="dashboard-items">
 					
-					<a href="#">{% load static %}<img src="{% static '/icons/save-2.svg' %}" class="icons">Saved</a>
+					<a href="#">{% load static %}<img src="{% static '/icons/save-2.svg' %}" class="icons"><span class="menu-text">Saved</span></a>
 				</div>
 
 				<div class="logout">
 					
-					<a href="">{% load static %}<img src="{% static '/icons/arrow-right.png' %}" class="icons">Log Out</a>
+					<a href=""><button class="btn1">{% load static %}<img src="{% static '/icons/arrow-right.png' %}" class="icons"><span class="menu-text">Log Out</span></button></a>
 		  		</div>
 				
 		  		

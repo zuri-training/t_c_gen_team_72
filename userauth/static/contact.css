@@ -83,7 +83,7 @@ color: #FFFFFF;
 /* banner */
 
 .banner{
-	background-image: url("{% static '/images/Contact-usHeader.png'%}");
+	background-image: url("/static/images/contact-usHeader.png");
 	height: 401px;
 	width: 1512px;
 	left: 0px;
@@ -358,7 +358,7 @@ color: #2D2D2D;
 }
 .banner{
 
-	background-image: url("{% static '/images/Contact-usHeader-mobile.png'%}");
+	background-image: url("/static '/images/contact-usHeader-mobile.png");
 	width: 360px;
 	height: 129px;
 	left: 0px;
