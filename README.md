@@ -4,7 +4,7 @@
 This is the **Terms Creator** cross platform app project repository handled by **Zuri-Training** and built by **Team 72** written with HTML5, CSS3/SCSS/Tailwind CSS, Bootstrap, Vanilla JavaScript and Python.
 <br />
 <br />
-This project uses the Django Templating.<br />
+This project uses Django Templating.<br />
 Our project name is termscreator, while our apps name is userauth.
 
 ## Project Description
@@ -97,7 +97,7 @@ Forking and Creating A Pull Request(PR)
 
 
 ## Collaborators
-Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors)
+Find all team_72's collaborators [here](https://github.com/zuri-training/t_c_gen_team_72/graphs/contributors)
 
 ## Running The Project With A Windows System
 ```
@@ -108,8 +108,19 @@ Find all team_72's collaborations [here](https://github.com/zuri-training/t_c_ge
 -- If you do not have a virtual environment, install one like this: pip install virtualenv_
 -- Activate your Virtual Environment using this command "[name of VE]\Scripts\activate
 -- Install django - pip install django
+-- Install Dependencies - pip install-r requirements.txt
+-- Update DB - py manage.py makemigrations
+-- Next step - py manage.py migrate
+-- Create Your Super User - py manage.py create superuser
 -- Run our Django Project: py manage.py runserver
 -- You get to view our entire work on our local server
+```
+
+## Once A Change Is Made To Our Project
+```
+-- Update DB - py manage.py makemigrations
+-- Next step - py manage.py migrate
+-- Run our Django Project: py manage.py runserver
 ```
 
 
