@@ -28,73 +28,9 @@
                     </div>
 
                     <!--nav-click for slider on mobile view -->
-                    <div class="nav-click-mb">
-                        <div class="icons">
-                            <img src="{% static '/icons/nav_element_mb.svg' %}" alt="nav-slider">
-                        </div>
-                    </div>
 
 
-                    <div class="nav-links">
-                        <div class="nav-links-container">
-                            <div class="icon">
-                                <!--1st Icon-->
-                            {% load static %}
-                                <img src="{% static '/icons/dashboard.svg' %}" alt="dashboard">
-                            </div>
-                            <div class="text">
-                                <a href="#" class="icon-text">Dashboard</a>
-                            </div>
 
-                            <!--2nd Icon-->
-                            <div class="active">
-                            <div class="icon">
-                            {% load static %}
-                                <img src="{% static '/icons/policies.svg' %}" alt="policies">
-                            </div>
-                            <div class="text">
-                                <a href="#" class="icon-text">Policies</a>
-                            </div>
-                            </div>
-
-                            <!--3rd Icon-->
-                            <div class="icon">
-                            {% load static %}
-                                <img src="{% static '/icons/profile.svg' %}" alt="my profile">
-                            </div>
-                            <div class="text">
-                                <a href="#" class="icon-text">My Profile</a>
-                            </div>
-
-                            <!--4th Icon-->
-                            <div class="icon">
-                            {% load static %}
-                                <img src="{% static '/icons/downloads.svg' %}" alt="downloads">
-                            </div>
-                            <div class="text">
-                                <a href="#" class="icon-text">Downloads</a>
-                            </div>
-
-                            <!--5th Icon-->
-                            <div class="icon">
-                            {% load static %}
-                                <img src="{% static '/icons/save.svg' %}" alt="saved">
-                            </div>
-                            <div class="text">
-                                <a href="#" class="icon-text">Saved</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-icons-mb">
-                        <div class="icons">
-                            <a href=""> <img src="{% static '/icons/user_picture_frame.svg' %}" alt="user-profile" class="user-icon"> </a>
-                    
-                        </div>
-                        <div class="icons">
-                            <a href=""> <img src="{% static '/icons/logout.svg' %}" alt="logout" class="logout-icon"> </a>
-                        </div>
-                    </div>
                 </nav>
             </header>
 
@@ -130,7 +66,7 @@
                             <div class="txt-container">
                             {% load static %}
                             <img src="{% static '/Pictures/t_and_c.png' %}" alt="tandcgen" class="generator">
-                            <button><a href="#">Preview </a></button>
+                            <button><a href="{% url 'dashboard' %}">Create </a></button>
                             </div>
                         </div>
                     </div>
@@ -140,7 +76,7 @@
                             <div class="txt-container">
                             {% load static %}
                                 <img src="{% static '/Pictures/t_and_c.png' %}" alt="tandcgen" class="generator">
-                                <button><a href="#">Preview </a></button>
+                                <button><a href="{% url 'dashboard' %}">Create </a></button>
                                 </div>
                         </div>
                     </div>
