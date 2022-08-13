@@ -69,9 +69,6 @@
                 <h3>Privacy Policy</h3>
                 <p>Collection Of Information</p>
             </div>
-            <div class="inner1">
-                <button>Export </button>
-            </div>
         </div>
          <form method="POST">
              {% csrf_token %}
@@ -162,7 +159,7 @@
 
              <div class="second">
                 <img src="{% static 'Pictures/t_and_c.png' %}" alt="">
-                <button>Preview</button>
+                 <button>Preview</button>
 
 
 
@@ -178,7 +175,7 @@
 
         <div>
             <div class="for-btn">
-                <a href="userInfo.html">
+                <a href="{% url 'second_question' %}">
                     <button class="prev">
                         Previous
                     </button>

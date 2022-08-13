@@ -79,7 +79,7 @@
                 <input type="submit" name="submit" id="submit" value="Create Account">
             </form>
         </div>
-        <p id="login">Already have an account? <a href="loginform.html"> Log in</a></p>
+        <p id="login">Already have an account? <a href="{% url 'loginform' %}"> Log in</a></p>
     </div>
     {% load static %}
     <script src="{% static 'signup.js' %}"></script>
