@@ -260,6 +260,11 @@ body{
     left: 280px;
     top: 82px;
 }
+#generate-main-page{
+    position: relative;
+    left: 500px;
+    top: 82px;
+}
 #search-button{
     padding: 8px;
     background: #FFFFFF;
@@ -480,11 +485,11 @@ color: #ffffff;
         border: none;
     }
     #export{
-        width: 285%;
+        width: 170%;
         height: 48px;
         font-size: 20px;
         position: relative;
-        top: 1250px;
+        top: 1350px;
         left: -185%;
     }
     #text-page{

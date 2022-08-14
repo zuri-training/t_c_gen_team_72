@@ -161,7 +161,7 @@
 {% for object in object_list %}
 
 {% if object.construction is True %}
-<div id="main-page">
+<div id="generate-main-page">
     <button type="submit" id="search-button">
         {% load static %}
         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -191,7 +191,7 @@
         </div>
     </div>
 
-    <div style="border-style: solid; width: 80%; overflow: scroll; height: 900px; margin-top: 400px;">
+    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px;">
         <p>STANDARD TERMS AND CONDITIONS FOR CONSTRUCTION SERVICES</p>
 
         1. ENGAGEMENT AND ACCEPTANCE
@@ -494,7 +494,7 @@
 </div>
 
 {% elif object.finance is True %}
-<div id="main-page">
+<div id="generate-main-page">
     <button type="submit" id="search-button">
         {% load static %}
         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -522,7 +522,7 @@
             </a>
         </div>
     </div>
-    <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
         <div>Terms and Conditions
             <p>
                 Welcome to [COMPANY NAME].
@@ -658,7 +658,7 @@
         </div>
     </div>
     {% elif object.employment is True %}
-    <div id="main-page">
+    <div id="generate-main-page">
         <button type="submit" id="search-button">
             {% load static %}
             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -690,7 +690,7 @@
                 </a>
             </div>
         </div>
-        <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+        <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
             <div>Terms and Conditions
                 <p>
 
@@ -962,7 +962,7 @@
             </div>
         </div>
         {% elif object.freelancer is True %}
-        <div id="main-page">
+        <div id="generate-main-page">
             <button type="submit" id="search-button">
                 {% load static %}
                 <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -991,7 +991,7 @@
                     </a>
                 </div>
             </div>
-            <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+            <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                 <div>Terms and Conditions
                     <p>
                         FREELANCE CONTRACT
@@ -1220,7 +1220,7 @@
                 </div>
             </div>
             {% elif object.health_care is True %}
-            <div id="main-page">
+            <div id="generate-main-page">
                 <button type="submit" id="search-button">
                     {% load static %}
                     <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1249,7 +1249,7 @@
                         </a>
                     </div>
                 </div>
-                <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                     <div>Terms and Conditions
                         <p>
                             1. TERM OF AGREEMENT.
@@ -1458,7 +1458,7 @@
                 </div>
 
                 {% elif object.real_estate is True %}
-                <div id="main-page">
+                <div id="generate-main-page">
                     <button type="submit" id="search-button">
                         {% load static %}
                         <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1487,7 +1487,7 @@
                             </a>
                         </div>
                     </div>
-                    <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                    <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                         <div>Terms and Conditions
                             <p>
                                 Terms of Use
@@ -1586,7 +1586,7 @@
                         </div>
                     </div>
                     {% elif object.saas is True %}
-                    <div id="main-page">
+                    <div id="generate-main-page">
                         <button type="submit" id="search-button">
                             {% load static %}
                             <img src="{% static '/icons/search-normal.svg' %}" alt="Search Button">
@@ -1615,7 +1615,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div style="border-style: solid; width: 70%; overflow: scroll; height: 900px; margin-top: 400px">
+                        <div style="border-style: solid; width: 60%; overflow: scroll; height: 900px; margin-top: 400px">
                             <div>Terms and Conditions
                                 <p>
                                     Free SaaS agreement: cover
@@ -3167,10 +3167,9 @@
                 </div>
 
                 {% load static %}
-                <script src="t-c-preview.js"></script>
+                <script src="{% static 't-c-preview.js' %}"></script>
             </div>
         </div>
-
 </body>
 </html>
 
