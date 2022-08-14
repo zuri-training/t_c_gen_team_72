@@ -17,6 +17,7 @@
 
 4. Terms and Condition Preview pagw:
         HTML: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/t-c-preview.html
+                The html page was used to create the generate.html page here https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/generate.html
         CSS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/t-c-preview.css
         JS: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/t-c-preview.js
 
