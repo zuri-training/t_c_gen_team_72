@@ -1,0 +1,17 @@
+a. contact page: https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/templates/contact.html
+                       https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/contact.css 
+                       https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/contact.js
+
+b. Dashboard-Main: - Html: https://github.com/Benjamin-Akinteye/t_c_gen_team_72-1/blob/main/userauth/templates/dashboard.html
+                                    https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/dashboard.css
+			https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/dashboard.js
+
+c. Export Option - https://github.com/Benjamin-Akinteye/t_c_gen_team_72-1/blob/main/userauth/templates/export-option.html
+			https://github.com/zuri-training/t_c_gen_team_72/blob/main/userauth/static/export.css
+
+
+................
+................
+................
+  
+     
