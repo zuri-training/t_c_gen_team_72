@@ -196,6 +196,7 @@ input[type=text] {
     display: flex;
     flex-direction:column;
     border-radius: 5px;
+    margin-left: 15px;
   }
   .second img{
     margin: 10px;
@@ -224,10 +225,12 @@ input[type=text] {
   .potter{
     background-color: #154ED4;
     color: #fff;
-    padding: 10px 80px;
+    padding: 9px 15px;
     margin-left: 35px;
     border: 2px solid #154ED4;
     border-radius:5px;
+    text-align: center;
+    height: fit-content;
   }
   .previous button{
     margin-left: 50px;
@@ -271,6 +274,7 @@ input[type=text] {
     justify-content: space-around;
     margin-top: 10px;
     margin-left: 60px;
+
   }
   .time p{
     font-family: sans-serif;

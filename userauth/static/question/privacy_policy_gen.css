@@ -218,10 +218,14 @@ input[type=text] {
     margin-top: 180px;
     margin-right: 30px;
   }
+  .potter button a{
+    color: #fff;
+    padding-right: 80px;
+  }
   .potter button{
     background-color: #154ED4;
     color: #fff;
-    padding: 10px 120px;
+    padding: 10px 60px;
     border: 2px solid #154ED4;
     border-radius:5px;
   }
