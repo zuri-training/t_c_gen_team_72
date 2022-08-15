@@ -283,3 +283,6 @@ input[type=text] {
   .hermes ul:hover{
     cursor: pointer;
   }
+  select{
+    margin-left: 20px;
+  }
